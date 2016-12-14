@@ -1,0 +1,50 @@
+.hero {
+  font-family: "Sumana", serif;
+  min-height: 800px;
+  background-size: cover;
+  padding-bottom: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .hero h2 {
+    color: #333; }
+  .hero h1 {
+    font-size: 4.5em;
+    line-height: 1.5em; }
+
+#intro {
+  padding: 64px 0px 64px 0px;
+  color: white;
+  background-image: url(../img/backgrounds/Chicago-Skyline-Sunset.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10vw 2em; }
+
+#about h2 {
+  text-align: center; }
+
+#contact {
+  text-align: center;
+  padding: 64px 0px 128px 0px; }
+  #contact img {
+    height: 30px;
+    margin: 10px 5px; }
+
+#about, #contact {
+  max-width: 1000px; }
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  justify-content: center; }
+  #footer .footer-item {
+    flex: 1; }
+
+/*# sourceMappingURL=main.css.map */
