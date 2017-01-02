@@ -14,13 +14,17 @@
     line-height: 1.5em; }
 
 #intro {
-  padding: 64px 0px 64px 0px;
   color: white;
+  text-shadow: RGBa(0, 0, 0, 0.5) 0px 5px 5px;
   background-image: url(../img/backgrounds/619941782.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10vw 2em; }
+  background-size: cover; }
+  #intro #middle-intro-title {
+    font-size: 115%; }
+  #intro a {
+    color: white;
+    text-decoration: none; }
 
 #about h2 {
   text-align: center; }
@@ -28,9 +32,23 @@
 #contact {
   text-align: center;
   padding: 64px 0px 128px 0px; }
+  #contact h2 {
+    margin: 0px; }
   #contact img {
     height: 30px;
     margin: 10px 5px; }
+  #contact .cta {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    width: 10em;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer; }
+    #contact .cta:hover {
+      color: turquoise; }
 
 #about, #contact {
   max-width: 1000px; }
@@ -46,5 +64,10 @@
   justify-content: center; }
   #footer .footer-item {
     flex: 1; }
+    #footer .footer-item a {
+      text-decoration: none;
+      color: black; }
+  #footer .copyright {
+    color: turquoise; }
 
 /*# sourceMappingURL=main.css.map */
