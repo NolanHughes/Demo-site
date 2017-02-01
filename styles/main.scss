@@ -1,3 +1,9 @@
+$accent-color-1: #57bc90;
+$accent-color-2: #a5a5af;
+$accent-color-3: #77c9d4;
+$accent-color-4: #015249;
+
+
 .hero {
   font-family: "Sumana", serif;
   min-height: 800px;
@@ -11,65 +17,120 @@
 
   h2 {
     color: #333;
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
 
   h1 {
     font-size: 4.5em;
     line-height: 1.5em;
   }
+
+  header {
+    font-size: 65px;
+    color: rgba(165, 165, 175, .25);
+    font-weight: bold;
+  }
 }
 
 #intro {
-  // padding: 64px 0px 64px 0px;
-  // padding: 10vw 2em;
-  color: white;
-  text-shadow: RGBa(0, 0, 0, .5) 0px 5px 5px;
-
   background-image: url(../img/backgrounds/619941782.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
-  #middle-intro-title {
-    font-size: 115%;
+  h1, h3, a {
+    color: white;
+    text-shadow: RGBa(0, 0, 0, .5) 0px 5px 5px;
+    text-decoration: none;
+  }
+  h3 {
+    font-weight: 900;
+    font-size: 26px;
+  }
+  h3 a {
+    &:hover {
+      color: $accent-color-3;
+      transition: 0.3s;
+    }
   }
 
-  a {
-    color: white;
-    text-decoration: none;
+  #middle-intro-title {
+    font-size: 110%;
   }
 }
 
 #about {
-  h2 {
-    text-align: center;
+  .left-col {
+    color: $accent-color-3;
+    padding: 20px;
+    text-align: right;
+    font-weight: 700;
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 45px;
+      line-height: 55px;
+    }
+  }
+  .right-col {
+    text-align: left;
+    padding: 20px;
+    h5 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+}
+
+#gallery {
+  header {
+    margin: 40px 0px;
+  }
+  .col-md-6 {
+    overflow: hidden;
+    img {
+      height: 100%;
+      max-width: 550px;
+      max-height: 550px;
+    }
   }
 }
 
 #contact {
   text-align: center;
   padding: 64px 0px 128px 0px;
-  h2 {
-    margin: 0px;
+  header {
+    margin: 20px 0px 20px 0px;
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: lighter;
   }
   img {
-    height: 30px;
-    margin: 10px 5px;
+    height: 25px;
+    margin: 40px 5px;
+    &:hover {
+      opacity: .5;
+    }
   }
   .cta {
-    background-color: black;
+    background-color: $accent-color-4;
     color: white;
-    padding: 5px;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    width: 10em;
-    font-size: 13px;
+    border-radius: 7px;
+    width: 7em;
+    font-size: 18px;
     line-height: 20px;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:hover {
-      color: turquoise;
+      background-color: $accent-color-1;
+      color: white;
     }
   }
 }
@@ -87,16 +148,90 @@
   padding-top: 4em;
   padding-bottom: 4em;
   justify-content: center;
+  font-size: 18px;
 
   .footer-item {
     flex: 1;
-
     a {
       text-decoration: none;
       color: black;
     }
+    &:hover a {
+      color: $accent-color-1;
+    }
   }
   .copyright {
-    color: turquoise;
+    color: $accent-color-1;
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  #gallery .col-md-6 {
+    overflow: hidden;
+    padding: 10px 5px 10px 5px;
+    img {
+      max-width: 450px;
+      max-height: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .row {
+    width: 100%;
+  }
+  #gallery .col-md-6 {
+    width: 100%;
+    margin-left: 15px;
+    img {
+      width: 100%;
+      max-width: 800px;
+      max-height: 800px;
+    }
+  }
+  #about {
+    margin-left: 30px;
+    .left-col{
+      text-align: center;
+    }
+    .right-col {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px){
+  #intro {
+    h1 {
+      font-size: 4em;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+  #about .left-col h3 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .hero header {
+    font-size: 45px
+  }
+  #contact p {
+    font-size: 20px;
+    margin: 0px 25px 20px 25px;
+  }
+  #footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    #signature-name {
+    text-align: left;
+    }
+    .footer-item {
+      text-align: center;
+    }
+    .copyright {
+      text-align: right;
+    }
   }
 }
