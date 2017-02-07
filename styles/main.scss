@@ -290,14 +290,14 @@ $accent-color-4: #015249;
 
 @media only screen and (max-width: 480px){
   .hero {
-    min-height: 700px;
+    min-height: 600px;
   }
   #intro {
     h1 {
-      font-size: 3.75em;
+      font-size: 3em;
     }
     h3 {
-      font-size: 1.4em;
+      font-size: 1.1em;
     }
   }
   #about .left-col h3 {
