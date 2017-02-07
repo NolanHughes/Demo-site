@@ -39,6 +39,20 @@
   #intro #middle-intro-title {
     font-size: 110%; }
 
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  left: 10px;
+  top: 10px;
+  z-index: 1; }
+  #hamburger img {
+    height: 40px;
+    width: 40px; }
+
 #about .left-col {
   color: #77c9d4;
   padding: 20px;
@@ -112,7 +126,7 @@
     #footer .footer-item a {
       text-decoration: none;
       color: black; }
-    #footer .footer-item:hover a {
+    #footer .footer-item a:hover {
       color: #57bc90; }
   #footer .copyright {
     color: #57bc90;

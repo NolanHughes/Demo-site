@@ -61,6 +61,26 @@ $accent-color-4: #015249;
   }
 }
 
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+
+  &:hover {
+
+  }
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 #about {
   .left-col {
     color: $accent-color-3;
@@ -156,7 +176,7 @@ $accent-color-4: #015249;
       text-decoration: none;
       color: black;
     }
-    &:hover a {
+    a:hover {
       color: $accent-color-1;
     }
   }
