@@ -210,10 +210,13 @@
   .copyright {
     font-size: .9em; } }
 @media only screen and (max-width: 480px) {
+  .hero {
+    min-height: 700px; }
+
   #intro h1 {
-    font-size: 4em; }
+    font-size: 3.75em; }
   #intro h3 {
-    font-size: 20px; }
+    font-size: 1.4em; }
 
   #about .left-col h3 {
     font-size: 34px;
@@ -234,9 +237,9 @@
       text-align: left; }
     #footer .footer-item {
       text-align: center;
-      font-size: .8em; }
+      font-size: .85em; }
     #footer .copyright {
       text-align: right;
-      font-size: .8em; } }
+      font-size: .5em; } }
 
 /*# sourceMappingURL=main.css.map */
