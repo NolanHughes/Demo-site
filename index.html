@@ -2,75 +2,98 @@
 <html>
   <head>
     <title>Nolan Hughes</title>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
     <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <!-- Font api -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
     <link rel="icon" href="img/icons/nh-logo-leftSideWhite.png">
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="scripts/app.js"></script>
   </head>
 
-  <body>
-    <div id="intro" class="container-fluid hero landscape">
-      <div id="hamburger" class= "js-menu-open"><img src="img/icons/nh-logo-leftSideWhite.png"/></div>
-      <h1>Nolan Hughes</h1>
-      <h3><a href="#">Drummer</a> | <a id="middle-intro-title" href="#about">Web Developer</a> | <a  href="#">Brewer</a></h3>
-    </div>
+  <body class="js-menu-close">
 
-    <div id="about" class="container-fluid hero">
-      <header>Bio</header>
-      <div class="row">
-        <div class="col-md-6 left-col">
-          <h3>I am a self-educated web developer who is passionate about designing highly sophisticated websites.</h3>
-        </div>
-        <div class="col-md-6 right-col">
-          <h5>Being a musician for most of my life has fueled my love for creating. Whether it's web design, music, sound editing, or even brewing beer, being creative and inspired is the core of my endeavors.</h5>
-        </div>
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="img/icons/x-blue.svg">
       </div>
-    </div>
-
-    <div id="gallery" class="container-fluid hero">
-      <header>Projects</header>
-      <div class="row">
-        <div class="col-md-6">
-          <a href="http://www.artisanbotanicals.net" target="_blank" title="Artisan Botanicals">
-            <img src="img/gallery/artisanBotanicals.png" alt="Artisan Botanicals">
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="http://www.nolanhughes.com" target="_blank" title="Codecademy Project Website">
-            <img src="img/gallery/spikeSpiegel.png" alt="Codecademy Project Website">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact" class="container-fluid hero">
-      <header>Contact Me</header>
-      <p>Let me know how I can help build your website!</p>
-      <a href="mailto:Nhguhes987@gmail.com"><button type="button" class="cta">Email</button></button></a>
-      <div id="social">
-        <a href="http://www.imdb.com/name/nm5085373/" target="_blank"><img src="img/icons/imdb-logo.png"/></a>
-        <a href="https://www.linkedin.com/in/nolan-hughes-3a58a82a" target="_blank"><img src="img/icons/linkedin-logo.png"/></a>
-        <a href="https://github.com/NolanHughes" target="_blank"><img src="img/icons/github-logo.png"/></a>
-      </div>
-    </div>
-
-    <div id="footer">
-      <div class="footer-item" id="signature-name">
-        <a href="#"><b>Nolan<br>Hughes</b></a>
-      </div>
-      <div class="footer-item">
+          <h2>Nolan</h2>
+          <h2>Hughes</h2>
+      <div class="sidebar-links">
         <a href="#about">About</a>
-      </div>
-      <div class="footer-item">
         <a href="#gallery">Projects</a>
-      </div>
-      <div class="footer-item">
         <a href="#contact">Contact</a>
       </div>
-      <div class="copyright">
-        <span>&copy;Nolan Hughes</span>
-      </div>
     </div>
 
+    <div id="main-wrapper">
+      <div id="intro" class="container-fluid hero landscape">
+        <div id="hamburger" class= "js-menu-open"><img src="img/icons/nh-logo-leftSideWhite.png"/></div>
+        <h1>Nolan Hughes</h1>
+        <h3><a href="#">Drummer</a> | <a id="middle-intro-title" href="#about">Web Developer</a> | <a  href="#">Brewer</a></h3>
+      </div>
+
+      <div id="about" class="container-fluid hero">
+        <header>Bio</header>
+        <div class="row">
+          <div class="col-md-6 left-col">
+            <h3>I am a self-educated web developer who is passionate about designing highly sophisticated websites.</h3>
+          </div>
+          <div class="col-md-6 right-col">
+            <h5>Being a musician for most of my life has fueled my love for creating. Whether it's web design, music, sound editing, or even brewing beer, being creative and inspired is the core of my endeavors.</h5>
+          </div>
+        </div>
+      </div>
+
+      <div id="gallery" class="container-fluid hero">
+        <header>Projects</header>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="http://www.artisanbotanicals.net" target="_blank" title="Artisan Botanicals">
+              <img src="img/gallery/artisanBotanicals.png" alt="Artisan Botanicals">
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="http://www.nolanhughes.com" target="_blank" title="Codecademy Project Website">
+              <img src="img/gallery/spikeSpiegel.png" alt="Codecademy Project Website">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="container-fluid hero">
+        <header>Contact Me</header>
+        <p>Let me know how I can help with your front-end development needs!</p>
+        <a href="mailto:Nhguhes987@gmail.com"><button type="button" class="cta">Email</button></button></a>
+        <div id="social">
+          <a href="http://www.imdb.com/name/nm5085373/" target="_blank"><img src="img/icons/imdb-logo.png"/></a>
+          <a href="https://www.linkedin.com/in/nolan-hughes-3a58a82a" target="_blank"><img src="img/icons/linkedin-logo.png"/></a>
+          <a href="https://github.com/NolanHughes" target="_blank"><img src="img/icons/github-logo.png"/></a>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="footer-item" id="signature-name">
+          <a href="#"><b>Nolan<br>Hughes</b></a>
+        </div>
+        <div class="footer-item">
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#gallery">Projects</a>
+        </div>
+        <div class="footer-item">
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="copyright">
+          <span>&copy;Nolan Hughes</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

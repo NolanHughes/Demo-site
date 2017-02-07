@@ -36,13 +36,13 @@ $accent-color-4: #015249;
 }
 
 #intro {
-  background-image: url(../img/backgrounds/619941782.jpg);
+  background-image: url(../img/backgrounds/chicago-690364.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   h1, h3, a {
     color: white;
-    text-shadow: RGBa(0, 0, 0, .5) 0px 5px 5px;
+    text-shadow: RGBa(0, 0, 0, .7) 0px 5px 5px;
     text-decoration: none;
   }
   h3 {
@@ -58,26 +58,6 @@ $accent-color-4: #015249;
 
   #middle-intro-title {
     font-size: 110%;
-  }
-}
-
-#hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  height: 50px;
-  width: 50px;
-  left: 10px;
-  top: 10px;
-  z-index: 1;
-
-  &:hover {
-
-  }
-  img {
-    height: 40px;
-    width: 40px;
   }
 }
 
@@ -186,6 +166,84 @@ $accent-color-4: #015249;
   }
 }
 
+
+#sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  padding-top: 10px;
+
+  font-family: "Roboto", serif;
+  color: white;
+  background-color: black;
+  z-index: 2;
+  overflow: hidden;
+
+  transition: all 0.5s ease;
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 4px;
+    padding: 0px;
+  }
+  a {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  &.open {
+    width: 260px;
+  }
+
+  .sidebar-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#close-btn {
+  margin-left: 30px;
+  margin-top: 10px;
+  align-self: flex-start;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 @media only screen and (max-width: 1140px) {
   #gallery .col-md-6 {
     overflow: hidden;
@@ -219,7 +277,16 @@ $accent-color-4: #015249;
       text-align: center;
     }
   }
-}
+
+    .footer-item {
+      // text-align: center;
+      font-size: .9em;
+    }
+    .copyright {
+      // text-align: right;
+      font-size: .9em;
+    }
+  }
 
 @media only screen and (max-width: 480px){
   #intro {
@@ -235,7 +302,8 @@ $accent-color-4: #015249;
     line-height: 40px;
   }
   .hero header {
-    font-size: 45px
+    font-size: 45px;
+    margin-right: 36px;
   }
   #contact p {
     font-size: 20px;
@@ -249,9 +317,11 @@ $accent-color-4: #015249;
     }
     .footer-item {
       text-align: center;
+      font-size: .8em;
     }
     .copyright {
       text-align: right;
+      font-size: .8em;
     }
   }
 }

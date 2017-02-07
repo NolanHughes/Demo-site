@@ -22,13 +22,13 @@
     font-weight: bold; }
 
 #intro {
-  background-image: url(../img/backgrounds/619941782.jpg);
+  background-image: url(../img/backgrounds/chicago-690364.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   #intro h1, #intro h3, #intro a {
     color: white;
-    text-shadow: RGBa(0, 0, 0, 0.5) 0px 5px 5px;
+    text-shadow: RGBa(0, 0, 0, 0.7) 0px 5px 5px;
     text-decoration: none; }
   #intro h3 {
     font-weight: 900;
@@ -38,20 +38,6 @@
     transition: 0.3s; }
   #intro #middle-intro-title {
     font-size: 110%; }
-
-#hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  height: 50px;
-  width: 50px;
-  left: 10px;
-  top: 10px;
-  z-index: 1; }
-  #hamburger img {
-    height: 40px;
-    width: 40px; }
 
 #about .left-col {
   color: #77c9d4;
@@ -132,6 +118,66 @@
     color: #57bc90;
     margin-left: 5px; }
 
+#sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  padding-top: 10px;
+  font-family: "Roboto", serif;
+  color: white;
+  background-color: black;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease; }
+  #sidebar-wrapper h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 4px;
+    padding: 0px; }
+  #sidebar-wrapper a {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px; }
+  #sidebar-wrapper.open {
+    width: 260px; }
+  #sidebar-wrapper .sidebar-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+#close-btn {
+  margin-left: 30px;
+  margin-top: 10px;
+  align-self: flex-start;
+  color: white;
+  cursor: pointer; }
+  #close-btn:hover {
+    opacity: 0.5; }
+  #close-btn img {
+    height: 30px;
+    width: 30px; }
+
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  left: 10px;
+  top: 10px;
+  z-index: 1; }
+  #hamburger:hover {
+    cursor: pointer; }
+  #hamburger img {
+    height: 40px;
+    width: 40px; }
+
 @media only screen and (max-width: 1140px) {
   #gallery .col-md-6 {
     overflow: hidden;
@@ -156,7 +202,13 @@
     #about .left-col {
       text-align: center; }
     #about .right-col {
-      text-align: center; } }
+      text-align: center; }
+
+  .footer-item {
+    font-size: .9em; }
+
+  .copyright {
+    font-size: .9em; } }
 @media only screen and (max-width: 480px) {
   #intro h1 {
     font-size: 4em; }
@@ -168,7 +220,8 @@
     line-height: 40px; }
 
   .hero header {
-    font-size: 45px; }
+    font-size: 45px;
+    margin-right: 36px; }
 
   #contact p {
     font-size: 20px;
@@ -180,8 +233,10 @@
     #footer #signature-name {
       text-align: left; }
     #footer .footer-item {
-      text-align: center; }
+      text-align: center;
+      font-size: .8em; }
     #footer .copyright {
-      text-align: right; } }
+      text-align: right;
+      font-size: .8em; } }
 
 /*# sourceMappingURL=main.css.map */
