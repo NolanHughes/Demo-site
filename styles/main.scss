@@ -57,10 +57,6 @@ $accent-color-4: #015249;
 }
 
 #intro {
-  // background-image: url(../img/backgrounds/chicago-690364.jpg);
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   h1, h3, a {
     color: white;
     text-shadow: RGBa(0, 0, 0, .7) 0px 5px 5px;
@@ -113,8 +109,8 @@ $accent-color-4: #015249;
     overflow: hidden;
     img {
       height: 100%;
-      max-width: 50px;
-      max-height: 50px;
+      max-width: 500px;
+      max-height: 500px;
     }
   }
   #beers {
