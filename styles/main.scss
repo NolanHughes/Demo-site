@@ -35,11 +35,32 @@ $accent-color-4: #015249;
   }
 }
 
+#intro-hb-bg {
+    background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro-index-bg {
+    background-image: url(../img/backgrounds/chicago-690364.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro-drums-bg {
+    background-image: url(../img/backgrounds/chicago-690364.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #intro {
-  background-image: url(../img/backgrounds/chicago-690364.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(../img/backgrounds/chicago-690364.jpg);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   h1, h3, a {
     color: white;
     text-shadow: RGBa(0, 0, 0, .7) 0px 5px 5px;
@@ -88,7 +109,7 @@ $accent-color-4: #015249;
   header {
     margin: 40px 0px;
   }
-  .col-md-6 {
+  .col-md-6, .col-md-4{
     overflow: hidden;
     img {
       height: 100%;

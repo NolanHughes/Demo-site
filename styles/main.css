@@ -21,23 +21,36 @@
     color: rgba(165, 165, 175, 0.25);
     font-weight: bold; }
 
-#intro {
+#intro-hb-bg {
+  background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#intro-index-bg {
   background-image: url(../img/backgrounds/chicago-690364.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  #intro h1, #intro h3, #intro a {
-    color: white;
-    text-shadow: RGBa(0, 0, 0, 0.7) 0px 5px 5px;
-    text-decoration: none; }
-  #intro h3 {
-    font-weight: 900;
-    font-size: 26px; }
-  #intro h3 a:hover {
-    color: #77c9d4;
-    transition: 0.3s; }
-  #intro #middle-intro-title {
-    font-size: 110%; }
+
+#intro-drums-bg {
+  background-image: url(../img/backgrounds/chicago-690364.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#intro h1, #intro h3, #intro a {
+  color: white;
+  text-shadow: RGBa(0, 0, 0, 0.7) 0px 5px 5px;
+  text-decoration: none; }
+#intro h3 {
+  font-weight: 900;
+  font-size: 26px; }
+#intro h3 a:hover {
+  color: #77c9d4;
+  transition: 0.3s; }
+#intro #middle-intro-title {
+  font-size: 110%; }
 
 #about .left-col {
   color: #77c9d4;
@@ -58,9 +71,9 @@
 
 #gallery header {
   margin: 40px 0px; }
-#gallery .col-md-6 {
+#gallery .col-md-6, #gallery .col-md-4 {
   overflow: hidden; }
-  #gallery .col-md-6 img {
+  #gallery .col-md-6 img, #gallery .col-md-4 img {
     height: 100%;
     max-width: 550px;
     max-height: 550px; }
