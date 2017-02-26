@@ -71,12 +71,18 @@
 
 #gallery header {
   margin: 40px 0px; }
-#gallery .col-md-6, #gallery .col-md-4 {
+#gallery .col-md-6 {
   overflow: hidden; }
-  #gallery .col-md-6 img, #gallery .col-md-4 img {
+  #gallery .col-md-6 img {
     height: 100%;
-    max-width: 550px;
-    max-height: 550px; }
+    max-width: 50px;
+    max-height: 50px; }
+#gallery #beers .col-md-6, #gallery #beers .col-md-4 {
+  overflow: hidden; }
+  #gallery #beers .col-md-6 img, #gallery #beers .col-md-4 img {
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px; }
 
 #contact {
   text-align: center;
@@ -202,10 +208,10 @@
   .row {
     width: 100%; }
 
-  #gallery .col-md-6 {
+  #gallery .col-md-6, .col-md-4 {
     width: 100%;
     margin-left: 15px; }
-    #gallery .col-md-6 img {
+    #gallery .col-md-6 img, .col-md-4 img {
       width: 100%;
       max-width: 800px;
       max-height: 800px; }

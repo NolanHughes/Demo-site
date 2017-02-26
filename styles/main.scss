@@ -109,12 +109,22 @@ $accent-color-4: #015249;
   header {
     margin: 40px 0px;
   }
-  .col-md-6, .col-md-4{
+  .col-md-6 {
     overflow: hidden;
     img {
       height: 100%;
-      max-width: 550px;
-      max-height: 550px;
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  #beers {
+    .col-md-6, .col-md-4 {
+      overflow: hidden;
+      img {
+        height: 100%;
+        max-width: 350px;
+        max-height: 350px;
+      }
     }
   }
 }
@@ -280,7 +290,7 @@ $accent-color-4: #015249;
   .row {
     width: 100%;
   }
-  #gallery .col-md-6 {
+  #gallery .col-md-6, .col-md-4 {
     width: 100%;
     margin-left: 15px;
     img {
