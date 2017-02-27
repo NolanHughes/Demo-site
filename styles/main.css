@@ -71,6 +71,9 @@
 
 #gallery {
   max-width: 1200px; }
+  #gallery h4 {
+    color: #015249;
+    font-weight: 700; }
   #gallery header {
     margin: 40px 0px; }
   #gallery .col-md-6 {
@@ -147,7 +150,7 @@
   width: 0px;
   height: 100%;
   padding-top: 10px;
-  font-family: "Roboto", serif;
+  font-family: "Sumana", serif;
   color: white;
   background-color: #222;
   z-index: 2;
@@ -249,7 +252,8 @@
   #close-btn img {
     margin-right: 235px;
     height: 40px;
-    width: 40px; }
+    width: 40px;
+    vertical-align: inherit; }
 
 #hamburger {
   display: flex;
@@ -325,6 +329,6 @@
       font-size: .85em; }
     #footer .copyright {
       text-align: right;
-      font-size: .5em; } }
+      font-size: .7em; } }
 
 /*# sourceMappingURL=main.css.map */
