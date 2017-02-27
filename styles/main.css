@@ -69,20 +69,22 @@
     font-size: 28px;
     line-height: 30px; }
 
-#gallery header {
-  margin: 40px 0px; }
-#gallery .col-md-6 {
-  overflow: hidden; }
-  #gallery .col-md-6 img {
-    height: 100%;
-    max-width: 500px;
-    max-height: 500px; }
-#gallery #beers .col-md-6, #gallery #beers .col-md-4 {
-  overflow: hidden; }
-  #gallery #beers .col-md-6 img, #gallery #beers .col-md-4 img {
-    height: 100%;
-    max-width: 350px;
-    max-height: 350px; }
+#gallery {
+  max-width: 1200px; }
+  #gallery header {
+    margin: 40px 0px; }
+  #gallery .col-md-6 {
+    overflow: hidden; }
+    #gallery .col-md-6 img {
+      height: 100%;
+      max-width: 500px;
+      max-height: 500px; }
+  #gallery #beers .col-md-6, #gallery #beers .col-md-4 {
+    overflow: hidden; }
+    #gallery #beers .col-md-6 img, #gallery #beers .col-md-4 img {
+      height: 100%;
+      max-width: 350px;
+      max-height: 350px; }
 
 #contact {
   text-align: center;
@@ -158,11 +160,17 @@
     padding: 0px; }
   #sidebar-wrapper a {
     color: white;
-    font-size: 24px;
+    font-size: 25px;
     margin-left: 10px; }
   #sidebar-wrapper.open {
     width: 260px; }
   #sidebar-wrapper .sidebar-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #sidebar-wrapper ul {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
