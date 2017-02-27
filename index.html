@@ -17,19 +17,53 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
-  <body class="js-menu-close">
+  <body>
     <div id="sidebar-wrapper" class="">
       <div id="close-btn" class="js-menu-close">
-        <img src="img/icons/x-blue.svg">
+        <img src="../nolanHughes/img/icons/x-blue.svg">
       </div>
-        <h2>Nolan</h2>
-        <h2>Hughes</h2>
       <div class="sidebar-links">
-        <a href="#about">About</a>
-        <a href="#gallery">Projects</a>
-        <a href="#contact">Contact</a>
+          <div class="accordion">
+
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#gallery">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"> <span>Hughes Brews</span></label>
+              <div class="content">
+                <ul>
+                  <li><a href="hughes-brews.html">Home</a></li>
+                  <li><a href="hughes-brews.html#about">About</a></li>
+                  <li><a href="hughes-brews.html#gallery">Beers</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Add back in after drum page is ready
+            <div class="section">
+              <input type="checkbox" id="section-3"/>
+              <label for="section-3"> <span>Drums</span></label>
+              <div class="content">
+                <ul>
+                  <li><span>Home</span></li>
+                  <li><span>About</span></li>
+                </ul>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
       </div>
-    </div>
 
     <div id="main-wrapper">
       <div id="intro-index-bg">
