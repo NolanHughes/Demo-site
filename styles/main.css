@@ -1,6 +1,6 @@
 .hero {
   font-family: "Sumana", serif;
-  min-height: 800px;
+  min-height: 100vh;
   background-size: cover;
   padding-bottom: 50px;
   text-align: center;
@@ -164,7 +164,7 @@
       text-decoration: none;
       color: #77c9d4; }
   #sidebar-wrapper.open {
-    width: 300px; }
+    width: 250px; }
   #sidebar-wrapper .sidebar-links {
     margin-right: 0px;
     display: flex;
@@ -176,7 +176,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 300px;
+    width: 250px;
     padding-left: 45px;
     margin: 0px;
     list-style: none; }
@@ -250,7 +250,7 @@
   #close-btn:hover {
     opacity: 0.5; }
   #close-btn img {
-    margin-right: 235px;
+    margin-right: 190px;
     height: 40px;
     width: 40px;
     vertical-align: inherit; }
@@ -275,6 +275,9 @@
       max-width: 450px;
       max-height: 450px; } }
 @media only screen and (max-width: 992px) {
+  .hero {
+    min-height: 100vh; }
+
   .row {
     width: 100%; }
 
@@ -300,7 +303,7 @@
     font-size: .9em; } }
 @media only screen and (max-width: 480px) {
   .hero {
-    min-height: 568px; }
+    min-height: 100vh; }
 
   #intro h1 {
     font-size: 3em; }
