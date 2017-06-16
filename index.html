@@ -24,13 +24,13 @@
       </div>
       <div class="sidebar-links">
           <div class="accordion">
-
             <div class="section">
               <input type="checkbox" id="section-1"/>
               <label for="section-1"><span>Web Developer</span></label>
               <div id="list-close-btn" class="content">
                 <ul>
                   <li><a href="#">Home</a></li>
+                  <li><a href="#bio">Bio</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#gallery">Projects</a></li>
                   <li><a href="#contact">Contact</a></li>
@@ -49,6 +49,7 @@
                 </ul>
               </div>
             </div>
+
             <!-- Add back in after drum page is ready
             <div class="section">
               <input type="checkbox" id="section-3"/>
@@ -67,69 +68,100 @@
 
     <div id="main-wrapper">
       <div id="intro-index-bg">
-        <div id="intro" class="container-fluid hero landscape">
-          <div id="hamburger" class= "js-menu-open"><img src="img/icons/nh-logo-leftSideGray.png"/></div>
+        <div id="intro" class="container-fluid hero landscape lg-box">
+          <div id="hamburger" class= "js-menu-open"><img src="img/icons/menu-black.svg"/></div>
           <h1>Nolan Hughes</h1>
           <h3><a href="#">Drummer</a> | <a id="middle-intro-title" href="#about">Web Developer</a> | <a  href="hughes-brews.html">Brewer</a></h3>
         </div>
       </div>
 
-      <div id="about" class="container-fluid hero">
-        <header>Bio</header>
-        <div class="row">
-          <div class="col-md-6 left-col">
-            <h3>I am a self-educated web developer who is passionate about designing highly sophisticated websites.</h3>
+      <div id=bio class="container-fluid hero sm-box">
+          <div class="inside-container">
+            <div class="left-column col-md-6">
+            <p>I am a self-educated web developer who is passionate about designing highly <span class="underline">sophisticated</span> websites.</p>
+            </div>
+            <div class="right-column col-md-6">
+            <p>Being a musician for most of my life has fueled my love for creating. Whether it's web design, music, sound editing, or even brewing beer, being creative and inspired is at the core of my endeavors.</p>
           </div>
-          <div class="col-md-6 right-col">
-            <h5>Being a musician for most of my life has fueled my love for creating. Whether it's web design, music, sound editing, or even brewing beer, being creative and inspired is the core of my endeavors.</h5>
+          </div>
+      </div>
+
+      <div id="about" class="container-fluid hero md-box">
+        <div class="inside-container">
+            <h2>About</h2>
+            <div>
+              <div class="about-list-item col-md-3">
+                <img class="about-icon-item" src="img/icons/HTML_Logo.png"/>
+                <p>Html</p>
+              </div>
+              <div class="about-list-item col-md-3">
+                <img class="about-icon-item" src="img/icons/CSS_Logo.png"/>
+                <p>CSS</p>
+              </div>
+              <div class="about-list-item col-md-3">
+                <img class="about-icon-item" src="img/icons/Javascript_Logo.png"/>
+                <p>JavaScript</p>
+              </div>
+              <div class="about-list-item col-md-3">
+                <img class="about-icon-item" src="img/icons/Sass_Logo.png"/>
+                <p>Sass</p>
+              </div>
+            </div>
+            <span id="about-text">
+              I will utilize these technologies and my own styling expertise<br />to make you a functional and sleek website.
+            </span>
+          </div>
+      </div>
+
+      <div id="gallery-preface" class="container-fluid hero sm-box">
+        <div class="inside-container">
+          <h2>Projects</h2>
+          <p>Since I have just started out as a <span class="underline">web developer</span> I have not had the privilege of working on a massive amount of projects, but have truly enjoyed helping<br />my previous clients. Links and brief descriptions are below.</p>
+        </div>
+      </div>
+
+      <div id="gallery" class="container-fluid hero lg-box">
+        <div class="inside-container">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="http://www.artisanbotanicals.net" target="_blank" title="Artisan Botanicals">
+                <img src="img/gallery/artisanBotanicals.png" alt="Artisan Botanicals">
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="http://www.nolanhughes.com/Portfolio" target="_blank" title="Codecademy Project Website">
+                <img src="img/gallery/spikeSpiegel.png" alt="Codecademy Project Website">
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="gallery" class="container-fluid hero">
-        <header>Projects</header>
-        <div class="row">
-          <div class="col-md-6">
-            <a href="http://www.artisanbotanicals.net" target="_blank" title="Artisan Botanicals">
-              <img src="img/gallery/artisanBotanicals.png" alt="Artisan Botanicals">
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="http://www.nolanhughes.com/Portfolio" target="_blank" title="Codecademy Project Website">
-              <img src="img/gallery/spikeSpiegel.png" alt="Codecademy Project Website">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div id="contact" class="container-fluid hero">
-        <header>Contact Me</header>
-        <p>Let me know how I can help with your front-end development needs!</p>
-        <a href="mailto:Nhughes987@gmail.com"><button type="button" class="cta">Email</button></button></a>
-        <div id="social">
-          <a href="http://www.imdb.com/name/nm5085373/" target="_blank"><img src="img/icons/imdb-logo.png"/></a>
-          <a href="https://www.linkedin.com/in/nolan-hughes-3a58a82a" target="_blank"><img src="img/icons/linkedin-logo.png"/></a>
-          <a href="https://github.com/NolanHughes" target="_blank"><img src="img/icons/github-logo.png"/></a>
+      <div id="contact" class="container-fluid hero md-box">
+        <div class="inside-container">
+          <p>Let me know how I can help with your website needs!</br>Email me at:
+            <a href="mailto:Nhughes987@gmail.com">Nhughes987@gmail.com</a>
+          </p>
+            <a href="http://www.imdb.com/name/nm5085373/" target="_blank"><img src="img/icons/imdb-logo.png"/></a>
+            <a href="https://www.linkedin.com/in/nolan-hughes-3a58a82a" target="_blank"><img src="img/icons/linkedin-logo.png"/></a>
+            <a href="https://github.com/NolanHughes" target="_blank"><img src="img/icons/github-logo.png"/></a>
         </div>
       </div>
 
       <div id="footer">
-        <div class="footer-item" id="signature-name">
-          <a href="#"><b>Nolan<br>Hughes</b></a>
+        <div class="inside-container row footer-content">
+          <div class="col-xs-2 left-column">
+            <a href="#"><img src="img/icons/nh-logo-leftSideGray.png"/></a>
+          </div>
+          <div class="col-xs-8 middle-column">
+            <a href="#bio">Bio</a></a>
+            <a href="#about">About</a>
+            <a href="#gallery">Projects</a>
+          </div>
+          <div class="col-xs-2 right-column">
+           <p>© 2017</br>Nolan Hughes</p>
+          </div>
         </div>
-        <div class="footer-item">
-          <a href="#about">About</a>
-        </div>
-        <div class="footer-item">
-          <a href="#gallery">Projects</a>
-        </div>
-        <div class="footer-item">
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="copyright">
-          <span>&copy;Nolan Hughes</span>
-        </div>
-      </div>
-    </div>
+
   </body>
 </html>

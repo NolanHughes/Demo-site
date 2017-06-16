@@ -1,25 +1,48 @@
+.sm-box {
+  min-height: 30vh; }
+
+.md-box {
+  min-height: 50vh; }
+
+.lg-box {
+  min-height: 100vh; }
+
 .hero {
   font-family: "Sumana", serif;
-  min-height: 100vh;
+  min-width: 100vw;
   background-size: cover;
-  padding-bottom: 50px;
   text-align: center;
+  padding: 70px 0px;
   display: flex;
   justify-content: center;
   flex-direction: column; }
+  .hero p {
+    font-size: 2.2em;
+    line-height: 1.5;
+    font-weight: normal;
+    text-rendering: optimizeLegibility; }
   .hero h2 {
-    color: #333;
-    font-size: 40px;
-    font-weight: 100;
-    margin-top: 100px;
-    margin-bottom: 50px; }
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0px 0px 50px 0px;
+    text-transform: uppercase; }
   .hero h1 {
     font-size: 4.5em;
     line-height: 1.5em; }
   .hero header {
     font-size: 65px;
-    color: rgba(165, 165, 175, 0.25);
+    color: white;
     font-weight: bold; }
+  .hero span {
+    display: inline-block; }
+  .hero .underline {
+    border-bottom: 4px solid #77c9d4; }
+
+.inside-container {
+  width: 75vw;
+  margin: auto; }
 
 #intro-hb-bg {
   background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
@@ -28,7 +51,7 @@
   background-size: cover; }
 
 #intro-index-bg {
-  background-image: url(../img/backgrounds/chicago-690364.jpg);
+  background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -52,95 +75,105 @@
 #intro #middle-intro-title {
   font-size: 110%; }
 
-#about .left-col {
-  color: #77c9d4;
-  padding: 20px;
+#bio .left-column {
+  color: #57bc90;
   text-align: right;
-  font-weight: 700; }
-  #about .left-col h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 45px;
-    line-height: 55px; }
-#about .right-col {
+  font-size: 1.25em; }
+#bio .right-column {
+  color: #a5a5af;
   text-align: left;
-  padding: 20px; }
-  #about .right-col h5 {
-    font-size: 28px;
-    line-height: 30px; }
+  font-size: .8em;
+  padding-top: 14px; }
 
-#gallery {
-  max-width: 1200px; }
-  #gallery h4 {
-    color: #015249;
-    font-weight: 700; }
-  #gallery header {
-    margin: 40px 0px; }
-  #gallery .col-md-6 {
-    overflow: hidden; }
-    #gallery .col-md-6 img {
-      height: 100%;
-      max-width: 500px;
-      max-height: 500px; }
-  #gallery #beers .col-md-6, #gallery #beers .col-md-4 {
-    overflow: hidden; }
-    #gallery #beers .col-md-6 img, #gallery #beers .col-md-4 img {
-      height: 100%;
-      max-width: 350px;
-      max-height: 350px; }
+.beer-color-bg {
+  background-color: #77c9d4; }
+
+#about {
+  background-color: #77c9d4;
+  color: white;
+  display: flex;
+  flex-direction: column; }
+  #about img {
+    height: 250px; }
+  #about .about-list-item {
+    display: inline-block;
+    padding: 0px; }
+  #about #about-text {
+    font-size: 2.2em;
+    margin-top: 30px; }
+
+#gallery-preface {
+  background-color: #003D46;
+  color: white; }
+  #gallery-preface h2 {
+    margin-bottom: 30px; }
+
+#gallery .col-md-6 {
+  overflow: hidden; }
+  #gallery .col-md-6 img {
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px; }
+#gallery .col-md-4 {
+  overflow: hidden; }
+  #gallery .col-md-4 img {
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px; }
+#gallery h4 {
+  color: white;
+  font-size: 2em; }
 
 #contact {
-  text-align: center;
-  padding: 64px 0px 128px 0px; }
+  background-color: #77c9d4;
+  text-align: center; }
   #contact header {
     margin: 20px 0px 20px 0px; }
   #contact p {
-    margin-bottom: 40px;
-    font-size: 25px;
-    font-weight: lighter; }
-  #contact img {
-    height: 25px;
-    margin: 40px 5px; }
-    #contact img:hover {
-      opacity: .5; }
-  #contact .cta {
-    background-color: #015249;
     color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 7px;
-    width: 7em;
-    font-size: 18px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: all 0.3s; }
-    #contact .cta:hover {
-      background-color: #57bc90;
-      color: white; }
-
-#about, #contact {
-  max-width: 1000px; }
+    margin-bottom: 20px;
+    font-weight: bold; }
+  #contact a {
+    color: #003D46;
+    text-decoration: none; }
+    #contact a:hover {
+      opacity: .75; }
+  #contact img {
+    height: 35px; }
 
 #footer {
+  min-height: 10vh;
+  min-width: 100vw;
+  background-color: #003D46;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 4em;
-  padding-bottom: 4em;
-  justify-content: center;
-  font-size: 18px; }
-  #footer .footer-item {
-    flex: 1; }
-    #footer .footer-item a {
-      text-decoration: none;
-      color: black; }
-    #footer .footer-item a:hover {
-      color: #57bc90; }
-  #footer .copyright {
-    color: #57bc90;
-    margin-left: 5px; }
+  flex-direction: column;
+  font-size: 18px;
+  padding: 50px 0px; }
+  #footer .footer-content {
+    display: flex;
+    align-items: center; }
+    #footer .footer-content a, #footer .footer-content p {
+      color: white;
+      text-decoration: none; }
+  #footer .left-column {
+    padding: 0px; }
+    #footer .left-column a > img {
+      height: 50px; }
+  #footer .middle-column {
+    display: inline;
+    text-align: center;
+    word-spacing: 8em;
+    font-size: 1.25em;
+    padding: 0px; }
+    #footer .middle-column a:hover {
+      color: #77c9d4; }
+  #footer .right-column {
+    padding: 0px;
+    font-size: .7em;
+    color: white; }
+    #footer .right-column p {
+      float: right;
+      margin: 0px; }
 
 #sidebar-wrapper {
   display: flex;
@@ -275,63 +308,76 @@
       max-width: 450px;
       max-height: 450px; } }
 @media only screen and (max-width: 992px) {
-  .hero {
-    min-height: 100vh; }
-
-  .row {
-    width: 100%; }
-
-  #gallery .col-md-6, .col-md-4 {
+  #gallery .col-md-6 {
     width: 100%;
     margin-left: 15px; }
-    #gallery .col-md-6 img, .col-md-4 img {
+    #gallery .col-md-6 img {
       width: 100%;
-      max-width: 800px;
-      max-height: 800px; }
+      max-width: 90vw;
+      max-height: 90vw; }
 
-  #about {
-    margin-left: 30px; }
-    #about .left-col {
-      text-align: center; }
-    #about .right-col {
-      text-align: center; }
+  #gallery .col-md-4 {
+    width: 100%;
+    margin-left: 15px; }
+    #gallery .col-md-4 img {
+      width: 100%;
+      max-width: 90vw;
+      max-height: 90vw; }
 
-  .footer-item {
-    font-size: .9em; }
+  #about .left-col {
+    text-align: center; }
+  #about .right-col {
+    text-align: center; }
 
-  .copyright {
-    font-size: .9em; } }
+  .row {
+    width: 100%; } }
 @media only screen and (max-width: 480px) {
   .hero {
-    min-height: 100vh; }
+    padding: 40px 0px; }
+    .hero .underline {
+      border-bottom: 2px solid #77c9d4; }
+
+  .inside-container {
+    width: 95vw;
+    margin: auto; }
 
   #intro h1 {
     font-size: 3em; }
   #intro h3 {
     font-size: 1.1em; }
 
-  #about .left-col h3 {
-    font-size: 34px;
-    line-height: 40px; }
+  #bio .left-column p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px; }
 
-  .hero header {
-    font-size: 45px;
-    margin-right: 36px; }
+  #bio .right-column p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px; }
+
+  #about .about-list-item img {
+    height: 100px; }
+  #about .about-list-item p {
+    font-size: 25px; }
+  #about #about-text {
+    font-size: 25px;
+    margin-top: 10px; }
+
+  #gallery-preface p {
+    font-size: 25px; }
 
   #contact p {
-    font-size: 20px;
-    margin: 0px 25px 20px 25px; }
+    font-size: 25px; }
+  #contact img {
+    height: 20px; }
 
-  #footer {
-    margin-left: 20px;
-    margin-right: 20px; }
-    #footer #signature-name {
-      text-align: left; }
-    #footer .footer-item {
-      text-align: center;
-      font-size: .85em; }
-    #footer .copyright {
-      text-align: right;
-      font-size: .7em; } }
+  #footer .left-column a > img {
+    height: 40px; }
+  #footer .middle-column {
+    font-size: 17px;
+    word-spacing: 10px; }
+  #footer .right-column {
+    font-size: 8px; } }
 
 /*# sourceMappingURL=main.css.map */

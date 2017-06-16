@@ -19,39 +19,73 @@ $accent-color-1: #57bc90;
 $accent-color-2: #a5a5af;
 $accent-color-3: #77c9d4;
 $accent-color-4: #015249;
+$accent-color-5: #003D46;
 $sidebar-width: 250px;
 
+$grid-gutter-width-base: 0px;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
 
+.sm-box{
+ min-height: 30vh;
+}
+
+.md-box{
+  min-height: 50vh;
+}
+
+.lg-box{
+  min-height: 100vh;
+}
 
 .hero {
   font-family: "Sumana", serif;
-  min-height: 100vh;
+  min-width: 100vw;
   background-size: cover;
-  padding-bottom: 50px;
   text-align: center;
-
+  padding: 70px 0px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  h2 {
-    color: #333;
-    font-size: 40px;
-    font-weight: 100;
-    margin-top: 100px;
-    margin-bottom: 50px;
+  p {
+    font-size: 2.2em;
+    line-height: 1.5;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
   }
-
+  h2 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0px 0px 50px 0px;
+    text-transform: uppercase;
+  }
   h1 {
     font-size: 4.5em;
     line-height: 1.5em;
   }
-
   header {
     font-size: 65px;
-    color: rgba(165, 165, 175, .25);
+    color: white;
     font-weight: bold;
   }
+  span {
+    display: inline-block;
+    }
+  .underline {
+    border-bottom: 4px solid $accent-color-3;
+  }
+}
+
+  .inside-container {
+    width: 75vw;
+    margin: auto;
 }
 
 #intro-hb-bg {
@@ -62,7 +96,8 @@ $sidebar-width: 250px;
 }
 
 #intro-index-bg {
-    background-image: url(../img/backgrounds/chicago-690364.jpg);
+    background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
+    // background-image: url(../img/backgrounds/omenaBay.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,149 +126,160 @@ $sidebar-width: 250px;
       transition: 0.3s;
     }
   }
-
   #middle-intro-title {
     font-size: 110%;
   }
 }
 
-#about {
-  .left-col {
-    color: $accent-color-3;
-    padding: 20px;
+#bio {
+  .left-column {
+    color: $accent-color-1;
     text-align: right;
-    font-weight: 700;
-    h3 {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 45px;
-      line-height: 55px;
-    }
+    font-size: 1.25em;
   }
-  .right-col {
+  .right-column {
+    color: $accent-color-2;
     text-align: left;
-    padding: 20px;
-    h5 {
-      font-size: 28px;
-      line-height: 30px;
-    }
+    font-size: .8em;
+    padding-top: 14px;
+  }
+}
+
+.beer-color-bg {
+  background-color: $accent-color-3;
+}
+
+#about {
+  background-color: $accent-color-3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 250px;
+  }
+  .about-list-item {
+    display: inline-block;
+    padding: $grid-gutter-width-base;
+  }
+  #about-text {
+    font-size: 2.2em;
+    margin-top: 30px;
+  }
+}
+
+
+#gallery-preface {
+  background-color: $accent-color-5;
+  color: white;
+  h2 {
+    margin-bottom: 30px;
   }
 }
 
 #gallery {
-  max-width: 1200px;
-  h4 {
-    color: $accent-color-4;
-    font-weight: 700;
-  }
-  header {
-    margin: 40px 0px;
-  }
   .col-md-6 {
     overflow: hidden;
     img {
       height: 100%;
-      max-width: 500px;
-      max-height: 500px;
+      max-width: 350px;
+      max-height: 350px;
     }
   }
-  #beers {
-    .col-md-6, .col-md-4 {
-      overflow: hidden;
-      img {
-        height: 100%;
-        max-width: 350px;
-        max-height: 350px;
-      }
+  .col-md-4 {
+    overflow: hidden;
+    img {
+      height: 100%;
+      max-width: 350px;
+      max-height: 350px;
     }
+  }
+  h4 {
+    color: white;
+    font-size: 2em;
   }
 }
 
 #contact {
+  background-color: $accent-color-3;
   text-align: center;
-  padding: 64px 0px 128px 0px;
   header {
     margin: 20px 0px 20px 0px;
   }
   p {
-    margin-bottom: 40px;
-    font-size: 25px;
-    font-weight: lighter;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  a {
+    color: $accent-color-5;
+    text-decoration: none;
+    &:hover {
+      opacity: .75;
+    }
   }
   img {
-    height: 25px;
-    margin: 40px 5px;
-    &:hover {
-      opacity: .5;
-    }
+    height: 35px;
   }
-  .cta {
-    background-color: $accent-color-4;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 7px;
-    width: 7em;
-    font-size: 18px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover {
-      background-color: $accent-color-1;
-      color: white;
-    }
-  }
-}
-
-#about, #contact {
-  max-width: 1000px;
 }
 
 #footer {
+  min-height: 10vh;
+  min-width: 100vw;
+  background-color: $accent-color-5;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 4em;
-  padding-bottom: 4em;
-  justify-content: center;
+  flex-direction: column;
   font-size: 18px;
-
-  .footer-item {
-    flex: 1;
-    a {
+  padding: 50px 0px;
+  .footer-content {
+    display: flex;
+    align-items: center;
+    a, p {
+      color: white;
       text-decoration: none;
-      color: black;
-    }
-    a:hover {
-      color: $accent-color-1;
     }
   }
-  .copyright {
-    color: $accent-color-1;
-    margin-left: 5px;
+  .left-column{
+    padding: $grid-gutter-width-base;
+    a > img {
+        height: 50px;
+    }
+  }
+  .middle-column {
+    display: inline;
+    text-align: center;
+    word-spacing: 8em;
+    font-size: 1.25em;
+    padding: $grid-gutter-width-base;
+    a {
+      &:hover {
+        color: $accent-color-3;
+      }
+    }
+  }
+  .right-column {
+    padding: $grid-gutter-width-base;
+    font-size: .7em;
+    color: white;
+    p {
+      float: right;
+      margin: 0px;
+    }
   }
 }
-
 
 #sidebar-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
   width: 0px;
   height: 100%;
   padding-top: 10px;
-
   font-family: "Sumana", serif;
   color: white;
   background-color: $toggle-background;
   z-index: 2;
   overflow: hidden;
-
   transition: all 0.5s ease;
   a {
     color: white;
@@ -244,11 +290,9 @@ $sidebar-width: 250px;
       color: $accent-color-3;
     }
   }
-
   &.open {
     width: $sidebar-width;
   }
-
   .sidebar-links {
     margin-right: 0px;
     display: flex;
@@ -356,7 +400,6 @@ $sidebar-width: 250px;
   left: 10px;
   top: 10px;
   z-index: 1;
-
   &:hover {
     cursor: pointer;
   }
@@ -379,23 +422,36 @@ $sidebar-width: 250px;
 }
 
 @media only screen and (max-width: 992px) {
-  .hero {
-    min-height: 100vh;
-  }
-  .row {
-    width: 100%;
-  }
-  #gallery .col-md-6, .col-md-4 {
+  #gallery .col-md-6 {
     width: 100%;
     margin-left: 15px;
     img {
       width: 100%;
-      max-width: 800px;
-      max-height: 800px;
+      max-width: 90vw;
+      max-height: 90vw;
     }
   }
+  #gallery .col-md-4 {
+    width: 100%;
+    margin-left: 15px;
+    img {
+      width: 100%;
+      max-width: 90vw;
+      max-height: 90vw;
+    }
+  }
+
+  // #beers .col-md-6 .col-md-4 {
+  //   width: 100%;
+  //   margin-left: 15px;
+  //   img {
+  //     width: 100%;
+  //     max-width: 90vw;
+  //     max-height: 90vw;
+  //   }
+  // }
+
   #about {
-    margin-left: 30px;
     .left-col{
       text-align: center;
     }
@@ -403,21 +459,24 @@ $sidebar-width: 250px;
       text-align: center;
     }
   }
-
-    .footer-item {
-      // text-align: center;
-      font-size: .9em;
-    }
-    .copyright {
-      // text-align: right;
-      font-size: .9em;
-    }
+  .row {
+    width: 100%;
   }
+}
 
 @media only screen and (max-width: 480px){
   .hero {
-    min-height: 100vh;
+    padding: 40px 0px;
+
+    .underline {
+      border-bottom: 2px solid $accent-color-3;
+    }
   }
+  .inside-container {
+    width: 95vw;
+    margin: auto;
+  }
+
   #intro {
     h1 {
       font-size: 3em;
@@ -426,31 +485,59 @@ $sidebar-width: 250px;
       font-size: 1.1em;
     }
   }
-  #about .left-col h3 {
-    font-size: 34px;
-    line-height: 40px;
+  #bio .left-column p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
   }
-  .hero header {
-    font-size: 45px;
-    margin-right: 36px;
+  #bio .right-column p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
   }
-  #contact p {
-    font-size: 20px;
-    margin: 0px 25px 20px 25px;
+
+  #about {
+    .about-list-item {
+      img {
+        height: 100px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+    #about-text {
+      font-size: 25px;
+      margin-top: 10px;
+    }
   }
+
+  #gallery-preface {
+    p {
+      font-size: 25px;
+    }
+  }
+
+  #contact {
+    p {
+    font-size: 25px;
+    }
+    img {
+      height: 20px;
+    }
+  }
+
   #footer {
-    margin-left: 20px;
-    margin-right: 20px;
-    #signature-name {
-    text-align: left;
+    .left-column{
+      a > img {
+          height: 40px;
+      }
     }
-    .footer-item {
-      text-align: center;
-      font-size: .85em;
+    .middle-column {
+      font-size: 17px;
+      word-spacing: 10px;
     }
-    .copyright {
-      text-align: right;
-      font-size: .7em;
+    .right-column {
+      font-size: 8px;
     }
   }
 }

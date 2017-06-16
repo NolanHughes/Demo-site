@@ -25,7 +25,7 @@
       <div class="sidebar-links">
           <div class="accordion">
             <div class="section">
-              
+
               <input type="checkbox" id="section-1"/>
               <label for="section-1"><span>Web Developer</span></label>
               <div id="list-close-btn" class="content">
@@ -50,8 +50,6 @@
               </div>
             </div>
 
-
-
             <!-- Add back in after drum page is ready
             <div class="section">
               <input type="checkbox" id="section-3"/>
@@ -70,66 +68,68 @@
 
     <div id="main-wrapper">
       <div id="intro-hb-bg">
-        <div id="intro" class="container-fluid hero landscape">
-          <div id="hamburger" class= "js-menu-open"><img src="img/icons/nh-logo-leftSideGray.png"/></div>
+        <div id="intro" class="container-fluid hero landscape lg-box">
+          <div id="hamburger" class= "js-menu-open"><img src="img/icons/menu-black.svg"/></div>
           <h1>Hughes Brews</h1>
           <h3>Delicious Homebrewed Beer</h3>
         </div>
       </div>
 
-      <div id="about" class="container-fluid hero">
-        <header>About Us</header>
-        <div class="row">
-          <div class="col-md-6 left-col">
-            <h3>Hughes Brews is a husband and wife brewing team that has been making delicious beer for almost two years.</h3>
+      <div id=bio class="container-fluid hero sm-box">
+          <div class="inside-container">
+            <div class="left-column col-md-6">
+            <p>Hughes Brews is a husband and wife <span class="underline">brewing</span> team that has been making delicious beer since 2015.</p>
+            </div>
+            <div class="right-column col-md-6">
+            <p>They brew 5 gallon batches and have a whole lot of fun doing it. Jessie and Nolan's tastes differ slightly in the beer that they prefer, but they haven't made anything yet that they didn't enjoy together.</p>
           </div>
-          <div class="col-md-6 right-col">
-            <h5>They brew 5 gallon batches and have a whole lot of fun doing it. Jessie and Nolan's tastes differ slightly in the beer that they prefer, but they haven't made anything yet that we didn't enjoy together.</h5>
           </div>
-        </div>
       </div>
 
-      <div id="gallery" class="container-fluid hero">
-        <header>Beer</header>
-        <div id="beers" class="row">
-          <div class="col-md-4">
+      <div id="gallery" class="container-fluid hero lg-box beer-color-bg">
+        <div class="inside-container">
+          <header>Beer</header>
+          <div class="row">
+            <div class="col-md-4">
               <img src="img/gallery/hughesBrews/devilsSnare.jpeg" alt="Devil's Snare">
               <h4>Devil's Snare</h4>
-          </div>
-          <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
               <img src="img/gallery/hughesBrews/siriusPorterGlass.jpeg" alt="Sirius Porter">
               <h4>Sirius Porter</h4>
-          </div>
-          <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
               <img src="img/gallery/hughesBrews/hoppopotamus.jpeg" alt="Hoppopotamus">
               <h4>Hoppopotamus</h4>
+            </div>
           </div>
-          <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
               <img src="img/gallery/hughesBrews/heftyHalo.jpeg" alt="Hefty Halo">
               <h4>Hefty Halo</h4>
-          </div>
-          <div class="col-md-6">
+              </a>
+            </div>
+            <div class="col-md-6">
               <img src="img/gallery/hughesBrews/severusStout.jpg" alt="Severus Stout">
               <h4>Severus Stout</h4>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="footer">
-        <div class="footer-item" id="signature-name">
-          <a href="#"><b>Hughes<br>Brews</b></a>
+    <div id="footer">
+      <div class="inside-container row footer-content">
+        <div class="col-xs-2 left-column">
+          <a href="#"><img src="img/icons/nh-logo-leftSideGray.png"/></a>
         </div>
-        <div class="footer-item">
-          <a href="#about">About</a>
-        </div>
-        <div class="footer-item">
+        <div class="col-xs-8 middle-column">
+          <a href="#bio">About</a></a>
           <a href="#gallery">Beer</a>
         </div>
-        <div class="copyright">
-          <span>&copy;Nolan Hughes</span>
+        <div class="col-xs-2 right-column">
+         <p>© 2017</br>Nolan Hughes</p>
         </div>
       </div>
-    </div>
 
   </body>
 </html>
