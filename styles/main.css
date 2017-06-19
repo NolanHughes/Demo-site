@@ -94,7 +94,7 @@
   display: flex;
   flex-direction: column; }
   #about img {
-    height: 250px; }
+    height: 200px; }
   #about .about-list-item {
     display: inline-block;
     padding: 0px; }
@@ -108,6 +108,11 @@
   #gallery-preface h2 {
     margin-bottom: 30px; }
 
+#gallery p {
+  font-size: 1.5em; }
+  #gallery p span {
+    font-size: 1.2em;
+    text-decoration: underline; }
 #gallery .col-md-6 {
   overflow: hidden; }
   #gallery .col-md-6 img {
@@ -120,9 +125,15 @@
     height: 100%;
     max-width: 350px;
     max-height: 350px; }
-#gallery h4 {
-  color: white;
-  font-size: 2em; }
+#gallery .gallery-text-sm-screens p {
+  color: #a5a5af;
+  text-align: left;
+  margin-bottom: 30px; }
+  #gallery .gallery-text-sm-screens p span {
+    margin-bottom: 10px;
+    color: black; }
+#gallery .gallery-text-sm-screens bdi {
+  color: white; }
 
 #contact {
   background-color: #77c9d4;
@@ -162,7 +173,7 @@
   #footer .middle-column {
     display: inline;
     text-align: center;
-    word-spacing: 8em;
+    word-spacing: 14vw;
     font-size: 1.25em;
     padding: 0px; }
     #footer .middle-column a:hover {
@@ -300,21 +311,22 @@
     height: 40px;
     width: 40px; }
 
-@media only screen and (max-width: 1140px) {
-  #gallery .col-md-6 {
-    overflow: hidden;
-    padding: 10px 5px 10px 5px; }
-    #gallery .col-md-6 img {
-      max-width: 450px;
-      max-height: 450px; } }
 @media only screen and (max-width: 992px) {
+  #about img {
+    height: 250px; }
+
   #gallery .col-md-6 {
     width: 100%;
-    margin-left: 15px; }
+    margin-left: 15px;
+    padding: 0px; }
     #gallery .col-md-6 img {
       width: 100%;
       max-width: 90vw;
       max-height: 90vw; }
+  #gallery .gallery-image-wrap:hover .hidden-gallery-text-wrap {
+    display: none; }
+  #gallery .gallery-text-sm-screens {
+    display: block; }
 
   #gallery .col-md-4 {
     width: 100%;
@@ -330,7 +342,14 @@
     text-align: center; }
 
   .row {
-    width: 100%; } }
+    width: 100%; }
+
+  #footer .middle-column {
+    font-size: 20px;
+    word-spacing: 12vw; } }
+@media only screen and (max-width: 675px) {
+  #about img {
+    height: 175px; } }
 @media only screen and (max-width: 480px) {
   .hero {
     padding: 40px 0px; }
@@ -357,9 +376,9 @@
     line-height: 30px; }
 
   #about .about-list-item img {
-    height: 100px; }
+    height: 60px; }
   #about .about-list-item p {
-    font-size: 25px; }
+    font-size: 13px; }
   #about #about-text {
     font-size: 25px;
     margin-top: 10px; }
@@ -376,7 +395,7 @@
     height: 40px; }
   #footer .middle-column {
     font-size: 17px;
-    word-spacing: 10px; }
+    word-spacing: 7vw; }
   #footer .right-column {
     font-size: 8px; } }
 
