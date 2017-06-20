@@ -1,3 +1,6 @@
+html {
+  -webkit-font-smoothing: antialiased; }
+
 .sm-box {
   min-height: 30vh; }
 
@@ -48,13 +51,15 @@
   background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 #intro-index-bg {
   background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 #intro-drums-bg {
   background-image: url(../img/backgrounds/chicago-690364.jpg);
@@ -108,11 +113,18 @@
   #gallery-preface h2 {
     margin-bottom: 30px; }
 
-#gallery p {
-  font-size: 1.5em; }
-  #gallery p span {
-    font-size: 1.2em;
-    text-decoration: underline; }
+#gallery ul {
+  list-style-type: none;
+  padding: 0px;
+  color: white;
+  font-size: 1.2em; }
+  #gallery ul li:last-child {
+    font-size: .8em;
+    font-style: italic; }
+#gallery bdi {
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold; }
 #gallery .col-md-6 {
   overflow: hidden; }
   #gallery .col-md-6 img {
@@ -125,15 +137,17 @@
     height: 100%;
     max-width: 350px;
     max-height: 350px; }
-#gallery .gallery-text-sm-screens p {
-  color: #a5a5af;
-  text-align: left;
-  margin-bottom: 30px; }
-  #gallery .gallery-text-sm-screens p span {
-    margin-bottom: 10px;
-    color: black; }
-#gallery .gallery-text-sm-screens bdi {
-  color: white; }
+#gallery .gallery-text-sm-screens {
+  text-align: left; }
+  #gallery .gallery-text-sm-screens header {
+    color: black;
+    text-decoration: underline;
+    font-size: 2em;
+    padding-bottom: 10px;
+    text-align: center; }
+  #gallery .gallery-text-sm-screens p {
+    color: #a5a5af;
+    font-size: 1.7em; }
 
 #contact {
   background-color: #77c9d4;
@@ -330,7 +344,8 @@
 
   #gallery .col-md-4 {
     width: 100%;
-    margin-left: 15px; }
+    margin-left: 15px;
+    padding: 0px; }
     #gallery .col-md-4 img {
       width: 100%;
       max-width: 90vw;
@@ -357,7 +372,7 @@
       border-bottom: 2px solid #77c9d4; }
 
   .inside-container {
-    width: 95vw;
+    width: 85vw;
     margin: auto; }
 
   #intro h1 {
@@ -395,7 +410,7 @@
     height: 40px; }
   #footer .middle-column {
     font-size: 17px;
-    word-spacing: 7vw; }
+    word-spacing: 4vw; }
   #footer .right-column {
     font-size: 8px; } }
 

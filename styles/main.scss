@@ -31,6 +31,10 @@ $grid-gutter-widths: (
   xl: $grid-gutter-width-base
 );
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 .sm-box{
  min-height: 30vh;
 }
@@ -93,14 +97,15 @@ $grid-gutter-widths: (
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #intro-index-bg {
     background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
-    // background-image: url(../img/backgrounds/omenaBay.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #intro-drums-bg {
@@ -177,13 +182,22 @@ $grid-gutter-widths: (
 }
 
 #gallery {
-  p {
-    font-size: 1.5em;
-    span {
-      font-size: 1.2em;
-      text-decoration: underline;
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    color: white;
+    font-size: 1.2em;
+    li:last-child {
+      font-size: .8em;
+      font-style: italic;
     }
   }
+  bdi {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
   .col-md-6 {
     overflow: hidden;
     img {
@@ -201,48 +215,19 @@ $grid-gutter-widths: (
     }
   }
   .gallery-text-sm-screens {
+    text-align: left;
+    header {
+      color: black;
+      text-decoration: underline;
+      font-size: 2em;
+      padding-bottom: 10px;
+      text-align: center;
+    }
     p {
       color: $accent-color-2;
-      text-align: left;
-      margin-bottom: 30px;
-      span {
-        margin-bottom: 10px;
-        color: black;
-      }
-    }
-    bdi {
-      color: white;
+      font-size: 1.7em;
     }
   }
-  // .hidden-gallery-text-wrap {
-  //   max-height: 350px;
-  //   max-width: 350px;
-  //   position: absolute;
-  //   margin: 0 auto;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   background: rgba(119, 201, 212, .9);
-  //   color: #fff;
-  //   visibility: hidden;
-  //   opacity: 0;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   transition: opacity .2s, visibility .2s;
-  // }
-  // .gallery-image-wrap:hover .hidden-gallery-text-wrap {
-  //   visibility: visible;
-  //   opacity: 1;
-  // }
-  // .hidden-gallery-text {
-  //   transition: .2s;
-  //   transform: translateY(1em);
-  // }
-  // .gallery-image-wrap:hover .hidden-gallery-text {
-  //   transform: translateY(0);
-  // }
 }
 
 #contact {
@@ -484,6 +469,7 @@ $grid-gutter-widths: (
   #gallery .col-md-4 {
     width: 100%;
     margin-left: 15px;
+    padding: 0px;
     img {
       width: 100%;
       max-width: 90vw;
@@ -520,13 +506,12 @@ $grid-gutter-widths: (
 @media only screen and (max-width: 480px){
   .hero {
     padding: 40px 0px;
-
     .underline {
       border-bottom: 2px solid $accent-color-3;
     }
   }
   .inside-container {
-    width: 95vw;
+    width: 85vw;
     margin: auto;
   }
 
@@ -587,7 +572,7 @@ $grid-gutter-widths: (
     }
     .middle-column {
       font-size: 17px;
-      word-spacing: 7vw;
+      word-spacing: 4vw;
     }
     .right-column {
       font-size: 8px;
