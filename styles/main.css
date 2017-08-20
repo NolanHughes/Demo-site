@@ -1,4 +1,5 @@
-html {
+body {
+  font-family: "Sumana", sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 .sm-box {
@@ -46,21 +47,8 @@ html {
   width: 75vw;
   margin: auto; }
 
-#intro-hb-bg {
-  background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-
 #intro-index-bg {
   background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#intro-drums-bg {
-  background-image: url(../img/backgrounds/chicago-690364.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -88,36 +76,9 @@ html {
   font-size: .8em;
   padding-top: 14px; }
 
-.beer-color-bg {
-  background-color: #77c9d4; }
-
-#about {
-  display: flex;
-  flex-direction: column;
-  background-color: #FBF9F3; }
-  #about img {
-    height: 200px; }
-  #about .about-list-item {
-    display: inline-block;
-    padding: 0px; }
-  #about #about-text {
-    font-size: 2.2em;
-    margin-top: 30px; }
-
-#gallery-preface {
-  background-color: #003D46;
-  color: white; }
-  #gallery-preface h2 {
-    margin-bottom: 30px; }
-
 #gallery {
   background-color: #015249;
   color: white; }
-  #gallery #gallery-description h2 {
-    margin-bottom: 25px; }
-  #gallery #gallery-description p {
-    margin-bottom: 25px;
-    font-size: 1.7em; }
   #gallery header {
     text-decoration: underline;
     font-size: 2em;
@@ -135,6 +96,18 @@ html {
       font-size: 1.7em;
       margin: 15px 0 0 0; }
 
+#about {
+  display: flex;
+  flex-direction: column; }
+  #about img {
+    height: 200px; }
+  #about .about-list-item {
+    display: inline-block;
+    padding: 0px; }
+  #about #about-text {
+    font-size: 2.2em;
+    margin-top: 30px; }
+
 #footer {
   min-height: 30vh;
   min-width: 100vw;
@@ -148,7 +121,8 @@ html {
     #footer .footer-content a, #footer .footer-content p {
       text-decoration: none; }
   #footer .left-column {
-    color: white; }
+    color: white;
+    padding-bottom: 1em; }
     #footer .left-column header {
       font-size: 4em;
       font-weight: bolder; }
@@ -174,13 +148,13 @@ html {
 
 #sidebar-wrapper {
   display: flex;
+  right: 0;
   flex-direction: column;
   align-items: center;
   position: fixed;
   width: 0px;
   height: 100%;
   padding-top: 10px;
-  font-family: "Sumana", serif;
   color: white;
   background-color: #222;
   z-index: 2;
@@ -194,7 +168,8 @@ html {
       text-decoration: none;
       color: #77c9d4; }
   #sidebar-wrapper.open {
-    width: 250px; }
+    width: 250px;
+    right: 0; }
   #sidebar-wrapper .sidebar-links {
     margin-right: 0px;
     display: flex;
@@ -228,9 +203,9 @@ html {
         .accordion .section input[type='checkbox']:checked + label:before {
           content: " ";
           position: absolute;
-          border-left: 3px solid #77c9d4;
+          border-right: 3px solid #77c9d4;
           height: 100%;
-          left: 0; }
+          right: 0; }
       .accordion .section input[type='checkbox']:checked ~ .content {
         max-height: 300px;
         opacity: 1;
@@ -280,7 +255,7 @@ html {
   #close-btn:hover {
     opacity: 0.5; }
   #close-btn img {
-    margin-right: 190px;
+    margin-left: 190px;
     height: 40px;
     width: 40px;
     vertical-align: inherit; }
@@ -288,12 +263,25 @@ html {
 #hamburger {
   display: flex;
   position: fixed;
-  left: 10px;
-  top: 10px;
-  z-index: 1; }
+  right: 20px;
+  top: 15px;
+  z-index: 1;
+  width: auto; }
   #hamburger:hover {
     cursor: pointer; }
   #hamburger img {
+    height: 40px;
+    width: 40px; }
+
+.logo {
+  display: flex;
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  z-index: 1; }
+  .logo:hover {
+    cursor: pointer; }
+  .logo img {
     height: 40px;
     width: 40px; }
 
@@ -336,7 +324,10 @@ html {
     word-spacing: 12vw; } }
 @media only screen and (max-width: 675px) {
   #about img {
-    height: 175px; } }
+    height: 175px; }
+
+  #footer .left-column header {
+    font-size: 3em; } }
 @media only screen and (max-width: 480px) {
   .hero {
     padding: 40px 0px; }
@@ -344,7 +335,7 @@ html {
       border-bottom: 2px solid #77c9d4; }
 
   .inside-container {
-    width: 85vw;
+    width: 90vw;
     margin: auto; }
 
   #intro h1 {
@@ -362,6 +353,12 @@ html {
     font-size: 25px;
     line-height: 30px; }
 
+  #gallery .gallery-text-sm-screens .not-last-paragraph {
+    margin-bottom: 25px; }
+  #gallery .gallery-text-sm-screens p {
+    font-size: 1.5em;
+    text-align: center; }
+
   #about .about-list-item img {
     height: 60px; }
   #about .about-list-item p {
@@ -370,20 +367,39 @@ html {
     font-size: 25px;
     margin-top: 10px; }
 
-  #gallery-preface p {
-    font-size: 25px; }
+  #footer {
+    padding: 25px 0px; }
+    #footer .left-column {
+      color: white;
+      line-height: 1.5;
+      padding: 0px; }
+      #footer .left-column header {
+        font-size: 1.9em;
+        font-weight: bolder; }
+        #footer .left-column header span {
+          color: #77c9d4; }
+      #footer .left-column p {
+        font-size: .9em; }
+    #footer .right-column {
+      font-size: .75em;
+      line-height: 2.25em;
+      padding: 0px; }
+      #footer .right-column ul {
+        padding: 0px; }
+      #footer .right-column li {
+        display: inline;
+        margin-left: 5px; }
+      #footer .right-column img {
+        height: 20px; }
 
-  #contact p {
-    font-size: 25px; }
-  #contact img {
-    height: 20px; }
+  #hamburger img, #close-btn img, .logo img {
+    height: 35px;
+    width: 35px; }
 
-  #footer .left-column a > img {
-    height: 40px; }
-  #footer .middle-column {
-    font-size: 17px;
-    word-spacing: 4vw; }
-  #footer .right-column {
-    font-size: 8px; } }
+  #hamburger {
+    right: 0px; }
+
+  .logo {
+    left: 0px; } }
 
 /*# sourceMappingURL=main.css.map */

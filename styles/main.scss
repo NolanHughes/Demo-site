@@ -31,7 +31,8 @@ $grid-gutter-widths: (
   xl: $grid-gutter-width-base
 );
 
-html {
+body {
+  font-family: "Sumana", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,24 +92,8 @@ html {
     margin: auto;
 }
 
-#intro-hb-bg {
-    background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 #intro-index-bg {
     background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-attachment: fixed;
-}
-
-#intro-drums-bg {
-    background-image: url(../img/backgrounds/chicago-690364.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,10 +105,12 @@ html {
     text-shadow: RGBa(0, 0, 0, .7) 0px 5px 5px;
     text-decoration: none;
   }
+
   h3 {
     font-weight: 900;
     font-size: 26px;
   }
+
   h3 a {
     &:hover {
       color: $accent-color-3;
@@ -149,50 +136,9 @@ html {
   }
 }
 
-.beer-color-bg {
-  background-color: $accent-color-3;
-}
-
-#about {
-  display: flex;
-  flex-direction: column;
-  background-color: #FBF9F3;
-  img {
-    height: 200px;
-  }
-  .about-list-item {
-    display: inline-block;
-    padding: $grid-gutter-width-base;
-  }
-  #about-text {
-    font-size: 2.2em;
-    margin-top: 30px;
-  }
-}
-
-
-#gallery-preface {
-  background-color: $accent-color-5;
-  color: white;
-  h2 {
-    margin-bottom: 30px;
-  }
-}
-
 #gallery {
   background-color: $accent-color-4;
   color: white;
-
-  #gallery-description {
-    h2 {
-      margin-bottom: 25px;
-    }
-
-    p {
-      margin-bottom: 25px;
-      font-size: 1.7em;
-    }
-  }
 
   header {
     text-decoration: underline;
@@ -211,13 +157,30 @@ html {
   }
 
   .gallery-text-sm-screens {
+
     text-align: left;
+
     p {
       font-size: 1.7em;
       margin: 15px 0 0 0;
     }
   }
+}
 
+#about {
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 200px;
+  }
+  .about-list-item {
+    display: inline-block;
+    padding: $grid-gutter-width-base;
+  }
+  #about-text {
+    font-size: 2.2em;
+    margin-top: 30px;
+  }
 }
 
 #footer {
@@ -227,16 +190,19 @@ html {
   display: flex;
   flex-direction: column;
   padding: 50px 0px;
+
   .footer-content {
     display: flex;
     align-items: center;
+
     a, p {
       text-decoration: none;
     }
   }
   .left-column{
     color: white;
-    // padding: $grid-gutter-width-base;
+    padding-bottom: 1em;
+
     header {
       font-size: 4em;
       font-weight: bolder;
@@ -244,27 +210,34 @@ html {
         color: $accent-color-3;
       }
     }
+
     p {
       font-size: 1.5em;
     }
   }
+
   .right-column {
     text-align: center;
     font-size: 1.5em;
     line-height: 2.5em;
+
     ul {
       padding: 0px;
     }
+
     li {
       display: inline;
       margin-left: 15px;
     }
+
     li:first-child {
       margin-left: 0px;
     }
+
     a {
       color: white;
     }
+
     img {
       height: 35px;
     }
@@ -273,13 +246,13 @@ html {
 
 #sidebar-wrapper {
   display: flex;
+  right: 0;
   flex-direction: column;
   align-items: center;
   position: fixed;
   width: 0px;
   height: 100%;
   padding-top: 10px;
-  font-family: "Sumana", serif;
   color: white;
   background-color: $toggle-background;
   z-index: 2;
@@ -296,6 +269,7 @@ html {
   }
   &.open {
     width: $sidebar-width;
+    right: 0;
   }
   .sidebar-links {
     margin-right: 0px;
@@ -336,9 +310,9 @@ html {
           &:before {
             content: " ";
             position: absolute;
-            border-left: 3px solid $accent-color-3;
+            border-right: 3px solid $accent-color-3;
             height: 100%;
-            left: 0;
+            right: 0;
           }
         }
         & ~ .content {
@@ -391,7 +365,7 @@ html {
     opacity: 0.5;
   }
   img {
-    margin-right: 190px;
+    margin-left: 190px;
     height: 40px;
     width: 40px;
     vertical-align: inherit;
@@ -401,12 +375,32 @@ html {
 #hamburger {
   display: flex;
   position: fixed;
-  left: 10px;
-  top: 10px;
+  right: 20px;
+  top: 15px;
   z-index: 1;
+  width: auto;
+
   &:hover {
     cursor: pointer;
   }
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.logo {
+  display: flex;
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+
   img {
     height: 40px;
     width: 40px;
@@ -474,6 +468,14 @@ html {
   #about img {
     height: 175px;
   }
+  #footer {
+    .left-column{
+
+      header {
+        font-size: 3em;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 480px){
@@ -484,7 +486,7 @@ html {
     }
   }
   .inside-container {
-    width: 85vw;
+    width: 90vw;
     margin: auto;
   }
 
@@ -507,6 +509,20 @@ html {
     line-height: 30px;
   }
 
+
+  #gallery {
+    .gallery-text-sm-screens{
+      .not-last-paragraph {
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 1.5em;
+        text-align: center;
+      }
+    }
+  }
+
   #about {
     .about-list-item {
       img {
@@ -522,33 +538,59 @@ html {
     }
   }
 
-  #gallery-preface {
-    p {
-      font-size: 25px;
-    }
-  }
-
-  #contact {
-    p {
-    font-size: 25px;
-    }
-    img {
-      height: 20px;
-    }
-  }
-
   #footer {
+    padding: 25px 0px;
+
     .left-column{
-      a > img {
-          height: 40px;
+      color: white;
+      line-height: 1.5;
+      padding: $grid-gutter-width-base;
+
+      header {
+        font-size: 1.9em;
+        font-weight: bolder;
+        span {
+          color: $accent-color-3;
+        }
+      }
+
+      p {
+        font-size: .9em;
       }
     }
-    .middle-column {
-      font-size: 17px;
-      word-spacing: 4vw;
-    }
+
     .right-column {
-      font-size: 8px;
+      font-size: .75em;
+      line-height: 2.25em;
+      padding: $grid-gutter-width-base;
+
+      ul {
+        padding: 0px;
+      }
+
+      li {
+        display: inline;
+        margin-left: 5px;
+      }
+
+      img {
+        height: 20px
+      }
     }
+  }
+
+  #hamburger, #close-btn, .logo {
+    img{
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  #hamburger {
+    right: 0px;
+  }
+
+  .logo {
+    left: 0px;
   }
 }
