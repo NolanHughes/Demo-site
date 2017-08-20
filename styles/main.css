@@ -25,7 +25,6 @@ html {
     font-weight: normal;
     text-rendering: optimizeLegibility; }
   .hero h2 {
-    color: white;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 3px;
@@ -58,8 +57,7 @@ html {
   background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 #intro-drums-bg {
   background-image: url(../img/backgrounds/chicago-690364.jpg);
@@ -94,10 +92,9 @@ html {
   background-color: #77c9d4; }
 
 #about {
-  background-color: #77c9d4;
-  color: white;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: #FBF9F3; }
   #about img {
     height: 200px; }
   #about .about-list-item {
@@ -113,92 +110,67 @@ html {
   #gallery-preface h2 {
     margin-bottom: 30px; }
 
-#gallery ul {
-  list-style-type: none;
-  padding: 0px;
-  color: white;
-  font-size: 1.2em; }
-  #gallery ul li:last-child {
-    font-size: .8em;
-    font-style: italic; }
-#gallery bdi {
-  color: black;
-  font-size: 1.2em;
-  font-weight: bold; }
-#gallery .col-md-6 {
-  overflow: hidden; }
-  #gallery .col-md-6 img {
-    height: 100%;
-    max-width: 350px;
-    max-height: 350px; }
-#gallery .col-md-4 {
-  overflow: hidden; }
-  #gallery .col-md-4 img {
-    height: 100%;
-    max-width: 350px;
-    max-height: 350px; }
-#gallery .gallery-text-sm-screens {
-  text-align: left; }
-  #gallery .gallery-text-sm-screens header {
-    color: black;
+#gallery {
+  background-color: #015249;
+  color: white; }
+  #gallery #gallery-description h2 {
+    margin-bottom: 25px; }
+  #gallery #gallery-description p {
+    margin-bottom: 25px;
+    font-size: 1.7em; }
+  #gallery header {
     text-decoration: underline;
     font-size: 2em;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center; }
-  #gallery .gallery-text-sm-screens p {
-    color: #a5a5af;
-    font-size: 1.7em; }
-
-#contact {
-  background-color: #77c9d4;
-  text-align: center; }
-  #contact header {
-    margin: 20px 0px 20px 0px; }
-  #contact p {
-    color: white;
-    margin-bottom: 20px;
-    font-weight: bold; }
-  #contact a {
-    color: #003D46;
-    text-decoration: none; }
-    #contact a:hover {
-      opacity: .75; }
-  #contact img {
-    height: 35px; }
+  #gallery .col-md-6 {
+    overflow: hidden; }
+    #gallery .col-md-6 img {
+      height: 100%;
+      max-width: 350px;
+      max-height: 350px; }
+  #gallery .gallery-text-sm-screens {
+    text-align: left; }
+    #gallery .gallery-text-sm-screens p {
+      font-size: 1.7em;
+      margin: 15px 0 0 0; }
 
 #footer {
-  min-height: 10vh;
+  min-height: 30vh;
   min-width: 100vw;
   background-color: #003D46;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
   padding: 50px 0px; }
   #footer .footer-content {
     display: flex;
     align-items: center; }
     #footer .footer-content a, #footer .footer-content p {
-      color: white;
       text-decoration: none; }
   #footer .left-column {
-    padding: 0px; }
-    #footer .left-column a > img {
-      height: 50px; }
-  #footer .middle-column {
-    display: inline;
-    text-align: center;
-    word-spacing: 14vw;
-    font-size: 1.25em;
-    padding: 0px; }
-    #footer .middle-column a:hover {
-      color: #77c9d4; }
-  #footer .right-column {
-    padding: 0px;
-    font-size: .7em;
     color: white; }
-    #footer .right-column p {
-      float: right;
-      margin: 0px; }
+    #footer .left-column header {
+      font-size: 4em;
+      font-weight: bolder; }
+      #footer .left-column header span {
+        color: #77c9d4; }
+    #footer .left-column p {
+      font-size: 1.5em; }
+  #footer .right-column {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2.5em; }
+    #footer .right-column ul {
+      padding: 0px; }
+    #footer .right-column li {
+      display: inline;
+      margin-left: 15px; }
+    #footer .right-column li:first-child {
+      margin-left: 0px; }
+    #footer .right-column a {
+      color: white; }
+    #footer .right-column img {
+      height: 35px; }
 
 #sidebar-wrapper {
   display: flex;

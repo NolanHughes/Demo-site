@@ -23,3 +23,20 @@ $(document).ready(function() {
    $('input[type="checkbox"]').not(this).prop('checked', false);
     });
   });
+
+//   Upturn.prototype.initWaypoints = function() {
+//     var t = "70%";
+//     $(".underline, .project-icon, .value-icon").waypoint(function(t) {
+//         "down" === t && ($(this)[0].element.className += " is-animated")
+//     }, {
+//         offset: t
+//     }),
+//     $(".services-icon").waypoint(function(t) {
+//         "down" === t && ($(this)[0].element.className += " is-animated",
+//         setTimeout(function() {
+//             $(".services-icon-clouds").addClass("is-moving")
+//         }, 2e3))
+//     }, {
+//         offset: t
+//     })
+// }
