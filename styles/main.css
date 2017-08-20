@@ -203,9 +203,8 @@ body {
         .accordion .section input[type='checkbox']:checked + label:before {
           content: " ";
           position: absolute;
-          border-right: 3px solid #77c9d4;
-          height: 100%;
-          right: 0; }
+          border-left: 3px solid #77c9d4;
+          height: 100%; }
       .accordion .section input[type='checkbox']:checked ~ .content {
         max-height: 300px;
         opacity: 1;
