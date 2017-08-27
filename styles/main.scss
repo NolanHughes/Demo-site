@@ -92,8 +92,15 @@ body {
     margin: auto;
 }
 
+#intro-hb-bg {
+    background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #intro-index-bg {
-    background-image: url(../img/backgrounds/fieldMuseum-skyline.jpg);
+    background-image: url(../img/backgrounds/fieldMuseum-skyline-75%.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,7 +154,7 @@ body {
     text-align: center;
   }
 
-  .col-md-6 {
+  .col-md-6, .col-md-4 {
     overflow: hidden;
     img {
       height: 100%;
@@ -157,13 +164,31 @@ body {
     }
   }
 
-  .gallery-text-sm-screens {
+  .col-md-4 {
+    margin-bottom: 20px;
+  }
 
+  .gallery-text-sm-screens {
     text-align: left;
 
     p {
       font-size: 1.7em;
       margin: 15px 0 0 0;
+    }
+  }
+
+  bdi {
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+
+    li {
+      font-size: 1.2em;
+      line-height: 1.5em;
     }
   }
 }
@@ -214,16 +239,18 @@ body {
 
     p {
       font-size: 1.5em;
+      color: white;
     }
   }
 
   .right-column {
     text-align: center;
     font-size: 1.5em;
-    line-height: 2.5em;
+    line-height: 2em;
 
     ul {
       padding: 0px;
+      margin-bottom: 5px;
     }
 
     li {
@@ -235,7 +262,7 @@ body {
       margin-left: 0px;
     }
 
-    a {
+    a, p {
       color: white;
     }
 
@@ -489,6 +516,14 @@ body {
   .inside-container {
     width: 90vw;
     margin: auto;
+  }
+
+  #intro-index-bg {
+      background-image: url(../img/backgrounds/fieldMuseum-skyline-smallScreens.jpg);
+  }
+
+  #intro-hb-bg {
+      background-image: url(../img/backgrounds/hughesBrews-bottleCaps-bg-smallScreens.jpg);
   }
 
   #intro {
