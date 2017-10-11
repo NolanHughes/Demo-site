@@ -59,6 +59,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+#intro-blog-bg {
+  background-image: url(../img/backgrounds/terminal_screenshot.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 #intro h1, #intro h3, #intro a {
   color: white;
   text-shadow: RGBa(0, 0, 0, 0.7) 0px 5px 5px;
