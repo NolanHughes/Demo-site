@@ -33,7 +33,7 @@ $grid-gutter-widths: (
 );
 
 body {
-  font-family: "Sumana", sans-serif;
+  font-family: Georgia, serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -50,7 +50,6 @@ body {
 }
 
 .hero {
-  font-family: "Sumana", serif;
   min-width: 100vw;
   background-size: cover;
   text-align: center;
@@ -108,14 +107,14 @@ body {
 }
 
 #intro-blog-bg  {
-    background-image: url(../img/backgrounds/terminal_screenshot.png);
+    background-image: url(../img/backgrounds/cmatrix-edited.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #intro {
-  h1, h3, a {
+  h1, h3, h4, a {
     color: white;
     text-shadow: RGBa(0, 0, 0, .7) 0px 5px 5px;
     text-decoration: none;
@@ -643,4 +642,82 @@ body {
 
 #blog-footer {
   margin: 0 auto;
+}
+
+.inside-container-blog{
+  width: 55%;
+
+  p {
+    font-size: 1.75em;
+
+    a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: $accent-color-3;
+    }
+  }
+
+  .posts {
+    text-align: left;
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 2.5em;
+      a {
+        color: #333;
+      }
+
+      a:hover {
+        color: $accent-color-3;
+      }
+    }
+
+    h4 {
+      font-style: italic;
+      color: $accent-color-2;
+    }
+  }
+}
+
+#intro {
+  .post-sub-heading {
+    color: white;
+    font-size: 1.7em;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+hr {
+  border-top: 1px solid $accent-color-2;
+}
+
+.blog-intro {
+  height: 70vh;
+}
+
+#blog-about-header {
+  font-size: 5.5em;
+}
+#main-wrapper {
+  .blog-about-padding {
+    padding: 0px;
+    height: 25vh;
+    min-height: 125px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .inside-container-blog{
+    width: 80%;
+  p {
+    font-size: 1.5em;
+  }
+  }
 }

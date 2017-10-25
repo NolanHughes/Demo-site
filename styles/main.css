@@ -1,5 +1,5 @@
 body {
-  font-family: "Sumana", sans-serif;
+  font-family: Georgia, serif;
   -webkit-font-smoothing: antialiased; }
 
 .sm-box {
@@ -12,7 +12,6 @@ body {
   min-height: 100vh; }
 
 .hero {
-  font-family: "Sumana", serif;
   min-width: 100vw;
   background-size: cover;
   text-align: center;
@@ -60,12 +59,12 @@ body {
   background-size: cover; }
 
 #intro-blog-bg {
-  background-image: url(../img/backgrounds/terminal_screenshot.png);
+  background-image: url(../img/backgrounds/cmatrix-edited.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
-#intro h1, #intro h3, #intro a {
+#intro h1, #intro h3, #intro h4, #intro a {
   color: white;
   text-shadow: RGBa(0, 0, 0, 0.7) 0px 5px 5px;
   text-decoration: none; }
@@ -434,5 +433,54 @@ body {
     left: 0px; } }
 #blog-footer {
   margin: 0 auto; }
+
+.inside-container-blog {
+  width: 55%; }
+  .inside-container-blog p {
+    font-size: 1.75em; }
+    .inside-container-blog p a {
+      color: #333;
+      text-decoration: underline; }
+    .inside-container-blog p a:hover {
+      color: #77c9d4; }
+  .inside-container-blog .posts {
+    text-align: left; }
+    .inside-container-blog .posts p {
+      margin-bottom: 30px; }
+    .inside-container-blog .posts h3 {
+      font-size: 2.5em; }
+      .inside-container-blog .posts h3 a {
+        color: #333; }
+      .inside-container-blog .posts h3 a:hover {
+        color: #77c9d4; }
+    .inside-container-blog .posts h4 {
+      font-style: italic;
+      color: #a5a5af; }
+
+#intro .post-sub-heading {
+  color: white;
+  font-size: 1.7em;
+  font-weight: 300;
+  font-style: italic; }
+
+hr {
+  border-top: 1px solid #a5a5af; }
+
+.blog-intro {
+  height: 70vh; }
+
+#blog-about-header {
+  font-size: 5.5em; }
+
+#main-wrapper .blog-about-padding {
+  padding: 0px;
+  height: 25vh;
+  min-height: 125px; }
+
+@media only screen and (max-width: 992px) {
+  .inside-container-blog {
+    width: 80%; }
+    .inside-container-blog p {
+      font-size: 1.5em; } }
 
 /*# sourceMappingURL=main.css.map */
