@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                  <li><a href="../about_blog.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>What is Object Oriented Programming?</h1>
+          <h2>-And why it's useful</h2>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on November 21 2017</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+              <p>
+                With never having worked with an object oriented programming language before starting the OO section of Ruby for Flatiron, it seemed foreign to me. Everything was unclear as to why this was different from other forms of programming until I worked through more of the curriculum and did some of my own research. Hopefully I can reiterate what I’ve learned in a succinct manner over these next few paragraphs.
+              </p>
+              <blockquote cite="https://en.wikipedia.org/wiki/Object-oriented_programming" class="quote">
+                “Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.” <br /><br />– Wikipedia
+              </blockquote>
+              <p>
+                It seems like that excerpt is saying that it’s just like other programming but with objects. Wow, what a surprise, object oriented programming deals with objects! <br /><img src = "../img/gifs/vine_I_sure_hope_it_does.gif"/><br /> That really cleared things up…not!
+              </p>
+              <p>
+                To actually make things clear we can first ask ourselves, what is an object? In the real world we naturally think of things as objects. A person can be represented as an object since they have behaviors (methods) and attributes (data). An example of a person’s method would be to pick up groceries and an attribute would be their name.
+              </p>
+              <blockquote cite="https://www.upwork.com/hiring/development/object-oriented-programming/" class="quote">
+                “If you want to change the television channel from your seat, you use a remote control. That remote control is an object with a number of attributes and behaviors hidden inside of it. Without an understanding of those hidden attributes—the microchips, wiring, etc.—you still know and expect that pressing a button will perform that particular function.” <br /><br />–Upwork
+              </blockquote>
+              <p>
+                This is what we want to do with our code in a lot of situations. Focusing on interactivity, abstraction, and how the objects behave and not the “hidden” code that tells the objects how to behave. It makes for reusable components and simpler future modification. I’ll leave you with a quote about this from one of Flatiron’s Mass Assignment and Metaprogramming lessons.
+              </p>
+              <blockquote cite="https://learn.co/lessons/mass-assignment-metaprogramming" class="quote">
+                “That is one major goal of design in object oriented programming––the writing of code that accommodates future change and doesn't require a lot of modification, even as it grows.”
+              </blockquote>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

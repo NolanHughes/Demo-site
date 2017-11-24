@@ -457,11 +457,18 @@ body {
       font-style: italic;
       color: #a5a5af; }
 
+#intro h2 {
+  color: white;
+  font-size: 2em;
+  text-transform: none; }
 #intro .post-sub-heading {
   color: white;
   font-size: 1.7em;
   font-weight: 300;
   font-style: italic; }
+
+blockquote {
+  font-size: 2em; }
 
 hr {
   border-top: 1px solid #a5a5af; }
