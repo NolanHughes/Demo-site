@@ -64,36 +64,26 @@
           <div id="hamburger" class="js-menu-open col-md-6">
             <img src="../img/icons/hamburgerButton-gray.png"/>
           </div>
-          <h1>What is Object Oriented Programming?</h1>
-          <h2>-And why it's useful</h2>
-          <h4 class="post-sub-heading">Posted by Nolan Hughes on November 24, 2017</h4>
+          <h1>CLI Gem Project</h1>
+          <h2>Breweries Near Me</h2>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on December 19, 2017</h4>
         </div>
       </div>
 
       <div id="body" class="container-fluid hero md-box">
         <div class="inside-container-blog inside-container">
           <div class="posts">
-              <p>
-                With never having worked with an object oriented programming language before starting the OO section of Ruby for Flatiron, it seemed foreign to me. Everything was unclear as to why this was different from other forms of programming until I worked through more of the curriculum and did some of my own research. Hopefully I can reiterate what I’ve learned in a succinct manner over these next few paragraphs.
-              </p>
-              <blockquote cite="https://en.wikipedia.org/wiki/Object-oriented_programming" class="quote">
-                “Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.” <br /><br />– Wikipedia
-              </blockquote>
-              <p>
-                It seems like that excerpt is saying that it’s just like other programming but with objects. Wow, what a surprise, object oriented programming deals with objects! <br /><img src = "../img/gifs/vine_I_sure_hope_it_does.gif"/><br /> That really cleared things up…not!
-              </p>
-              <p>
-                To actually make things clear we can first ask ourselves, what is an object? In the real world we naturally think of things as objects. A person can be represented as an object since they have behaviors (methods) and attributes (data). An example of a person’s method would be to pick up groceries and an attribute would be their name.
-              </p>
-              <blockquote cite="https://www.upwork.com/hiring/development/object-oriented-programming/" class="quote">
-                “If you want to change the television channel from your seat, you use a remote control. That remote control is an object with a number of attributes and behaviors hidden inside of it. Without an understanding of those hidden attributes—the microchips, wiring, etc.—you still know and expect that pressing a button will perform that particular function.” <br /><br />–Upwork
-              </blockquote>
-              <p>
-                This is what we want to do with our code in a lot of situations. Focusing on interactivity, abstraction, and how the objects behave and not the “hidden” code that tells the objects how to behave. It makes for reusable components and simpler future modification. I’ll leave you with a quote about this from one of Flatiron’s Mass Assignment and Metaprogramming lessons.
-              </p>
-              <blockquote cite="https://learn.co/lessons/mass-assignment-metaprogramming" class="quote">
-                “That is one major goal of design in object oriented programming––the writing of code that accommodates future change and doesn't require a lot of modification, even as it grows.”
-              </blockquote>
+            <p>This was definitely a tough project. There’s no question about that! It gives you more free range than any of the labs up until this point, but that doesn’t necessarily make it any easier. I’ll go into the dirty details below.</p>
+
+            <p>So I wanted to make an app that lists top rated breweries. The user inputs a city, the program lists top breweries in that city and then you can see a summary of the brewery of your choice and their top rated beers. My initial idea for this project was to scrape from the BeerAdvocate website because it has all of the information that I needed. I quickly ran into troubles. </p>
+
+            <p>While I was on a page for a specific city, there wasn’t any way to instantiate a city object with the correct name. It was odd that there wasn’t a header with the city name, and instead it was just the state where the city resides. My only option was to scrape from the first brewery’s address in the list. Maybe my knowledge of scraping isn’t that good, but for the life of me I couldn’t extract the city from the address. There were too many variants of street, avenue, and boulevard concatenated onto the beginning of the city in the string to make it manageable.</p>
+
+            <p>This led me to find an API called breweryDB. It is an extremely large database of breweries and beers from around the world. It doesn’t have any ratings associated with the beers or breweries like BeerAdvocate does, but I may add a feature later to cross-reference the API and BeerAdvocate. </p>
+
+            <p>Before I actually started pulling data from the API, I created basic versions of my classes and was passing in “fake” data that I hard coded into my objects. This was an extremely helpful technique because it got all of my class relationships headed in the right direction before I started working with large amounts of data that wasn’t right in front of me. Later on in the project I almost wished I had waited longer to start instantiating “real” objects from the API because it was more difficult to debug when I had to deal with multiple city objects that had up to 50 breweries objects each, all of which had three beer objects.</p>
+
+            <p>The bulk of the work consisted of figuring out where my methods should live, how to call everything, and transferring data between classes. I feel like this is where I might be lacking the most in my programming knowledge. While the code I wrote works, it doesn’t always seem elegant. But, after loads of hours, some more frustrating than others, I had completed my project. Hopefully taking a few days to step away from it and coming back after an assessment will give me good insight on ways to improve. Overall I really enjoyed working on this app. I can’t wait to start refactoring with a Flatiron instructor and adding additional features later on to make it even more amazing!</p>
 
           </div>
         </div>
