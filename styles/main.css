@@ -456,6 +456,8 @@ body {
     .inside-container-blog .posts h4 {
       font-style: italic;
       color: #a5a5af; }
+    .inside-container-blog .posts li {
+      font-size: 1.75em; }
 
 #intro h2 {
   color: white;
@@ -487,7 +489,12 @@ hr {
 @media only screen and (max-width: 992px) {
   .inside-container-blog {
     width: 80%; }
-    .inside-container-blog p {
+    .inside-container-blog .posts p, .inside-container-blog .posts li {
       font-size: 1.5em; } }
+@media only screen and (max-width: 480px) {
+  #footer .right-column {
+    font-size: 1.5em; }
+    #footer .right-column img {
+      height: 35px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -644,7 +644,7 @@ body {
   margin: 0 auto;
 }
 
-.inside-container-blog{
+.inside-container-blog {
   width: 55%;
 
   p {
@@ -682,7 +682,13 @@ body {
       font-style: italic;
       color: $accent-color-2;
     }
+
+    li {
+      font-size: 1.75em;
+    }
   }
+
+
 }
 
 #intro {
@@ -725,8 +731,22 @@ hr {
 @media only screen and (max-width: 992px) {
   .inside-container-blog{
     width: 80%;
-  p {
-    font-size: 1.5em;
+    .posts {
+      p, li {
+        font-size: 1.5em;
+      }
+    }
   }
+}
+
+@media only screen and (max-width: 480px) {
+  #footer {
+    .right-column {
+      font-size: 1.5em;
+
+      img {
+        height: 35px;
+      }
+    }
   }
 }
