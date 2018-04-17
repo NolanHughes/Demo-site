@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                  <li><a href="../about_blog.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Beer Recipe App</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on April 16th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              I built this web app using Rails and it is all about making beer recipes for home brewing. It allows users who create an account to make a recipe and view all of the other recipes that other users have created. While creating these recipes the user has the ability to select a number of fermentables, hops, and yeasts, create their own ingredients, and afterwards view, edit, and delete their recipes. I also implemented features that display the most popular style of beer and output a list of beers that only have one type of malt and hop (SMASH beers).
+            </p>
+            <p>
+              Throughout this process I honed my skills at making forms, views, helpers, and associations. I built out my own methods to assign attributes to join tables and it seemed like my knowledge increased ten-fold on everything I had learned up to this point. Below I’m going to go into more details about forms and refactoring along with a few of my struggles and high moments.
+            </p>
+            <h3>Forms</h3>
+            <p>
+              These were quite tricky for me at first. I knew how to use most of the Rails helpers like form_for and fields_for, but hadn’t implemented them in ways that were quite as complex as I needed for this project. I needed to be able to have the user select a current ingredient or create a new one and create an instance of a join table that assigns the ingredient to the current recipe. This is complicated because if an ingredient hasn’t been created yet I can’t use strong params to automatically create the instance of the join table and assign all of the necessary attributes to it. I had to wait until after the recipe had been saved to the database, which officially saves the ingredient, and then create and assign everything necessary for the join table instance to work.
+            </p>
+            <p>
+              Big shout out to Katie Larson for helping me work this problem out! She helped me work through some of the big hurdles necessary to write the custom methods that would send all of the data from the form into my methods. After that bridge was crossed I did some fine tweaking and all of the creating and assigning worked beautifully.
+            </p>
+            <h3>Refactoring</h3>
+            <p>
+              Refactoring seemed like it was going to be a chore when I started it. After giving myself a refresher on partials and helper methods though, it was a breeze! I was able to cut the amount of lines of code in my main recipe form by half with the use of helpers and divvying out code into partials. This was definitely one of the more rewarding experiences since I was able to make my code more DRY.
+            </p>
+            <h3>Conclusion</h3>
+            <p>
+              Overall, I really enjoyed working on this project and hope to increase its functionality in the future. This is definitely pertinent because of the upcoming JavaScript module. I’m getting excited already thinking of all the features that I’m going to implement.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
