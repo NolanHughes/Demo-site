@@ -85,7 +85,15 @@ body {
   .underline {
     border-bottom: 4px solid $accent-color-3;
   }
+  .code-label {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 0px 7px;
+  }
 }
+
+
+
 
 .inside-container {
     width: 75vw;

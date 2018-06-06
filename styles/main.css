@@ -41,6 +41,10 @@ body {
     display: inline-block; }
   .hero .underline {
     border-bottom: 4px solid #77c9d4; }
+  .hero .code-label {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 0px 7px; }
 
 .inside-container {
   width: 75vw;
