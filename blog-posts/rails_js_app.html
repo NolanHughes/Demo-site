@@ -90,10 +90,10 @@
               Here is a picture of my DevTools console in Chrome showing what happens when page specific JavaScript isn’t implemented.
             </p>
 
-            <img class="col-md-12" src="../img/rails-js-screenshots/psj-error-edited.png">
+            <img class="col-md-12" style="width: 100%;" src="../img/rails-js-screenshots/psj-error-edited.png">
 
             <p>
-              As you can see there are two requests happening, one from recipes-index.js and one from recipes-show.js. I’m currently on my show page so the request on the index page is completely unnecessary. Furthermore, if you look at the second GET request you will see that the url isn’t even valid, "http://localhost:3000/users/NaN/recipes.json". This is occurring because my data on the index and show page are completely different and the variables that determine that url can’t be set in the same way on both pages.
+              As you can see there are two requests happening, one from recipes-index.js and one from recipes-show.js. I’m currently on my show page so the request on the index page is completely unnecessary. Furthermore, if you look at the second GET request you will see that the url isn’t even valid. This is occurring because my data on the index and show page are completely different and the variables that determine that url can’t be set in the same way on both pages.
             </p>
 
             <p>
@@ -121,11 +121,11 @@
             </p>
 
             <h3 style="text-align: center;">Index</h3>
-            <img class="col-md-12"src="../img/rails-js-screenshots/recipes-index-edited.png">
+            <img class="col-md-12" style="width: 100%;" src="../img/rails-js-screenshots/recipes-index-edited.png">
             <h3 style="text-align: center;">New</h3>
-            <img class="col-md-12"src="../img/rails-js-screenshots/recipes-new-edited.png">
+            <img class="col-md-12" style="width: 100%;" src="../img/rails-js-screenshots/recipes-new-edited.png">
             <h3 style="text-align: center;">Show</h3>
-            <img class="col-md-12" style="margin-bottom: 30px;"src="../img/rails-js-screenshots/recipes-show-edited.png">
+            <img class="col-md-12" style="width: 100%;" style="margin-bottom: 30px;" src="../img/rails-js-screenshots/recipes-show-edited.png">
 
             <p>
               The next step is using the <a target="_blank" href="https://github.com/Verba/jquery-readyselector">jquery-readyselector plugin</a>. This is what does the magic of reading what the current class is, set by the above variables in your body tag, and then firing only the JavaScript you need.
@@ -170,8 +170,7 @@
             <p>
               Now, for example, if you load up the recipe show page, the code that is in recipes-index.js won’t run!
             </p>
-
-            <img class="col-md-12"src="../img/rails-js-screenshots/psj-fixed-edited.png">
+            <img class="col-md-12" style="width: 100%;" src="../img/rails-js-screenshots/recipes-new-edited.png">
 
             <p>
               How cool is that!
