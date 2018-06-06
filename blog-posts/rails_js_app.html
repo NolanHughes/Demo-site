@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                  <li><a href="../about_blog.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Beer Recipe App with JavaScript</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on June 6th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              So the latest project I’ve completed is actually an extension of my previous Rails project. It incorporates all of the goodness that is JavaScript into my recipe app for documenting homebrewed beer recipes. Since I feel like I added about a thousand new features, I’m going to focus on only one feature/topic in this post so that I’m able to go deeper in explaining how it works and not just give another overview of the app. The topic I’ll be covering today is page specific JavaScript!
+            </p>
+
+            <p>
+              While this topic might not sound super intriguing, I can assure you that it of the utmost importance and the way I implemented it in my application is actually pretty cool!
+            </p>
+
+            <h3>Problem</h3>
+
+            <p>
+              My reasoning behind needing page specific JavaScript was a simple one. I have multiple fetch requests written in my code and I don’t want certain ones to happen that aren’t applicable to the page that is being rendered. Without implementing some form of page specific JavaScript, as I will detail below, I’ll get all of the fetch requests being fired when in reality I might only need one.
+            </p>
+
+            <p>
+              Here is a picture of my DevTools console in Chrome showing what happens when page specific JavaScript isn’t implemented.
+            </p>
+
+            <img class="col-md-12" src="../img/rails-js-screenshots/psj-error-edited.png">
+
+            <p>
+              As you can see there are two requests happening, one from recipes-index.js and one from recipes-show.js. I’m currently on my show page so the request on the index page is completely unnecessary. Furthermore, if you look at the second GET request you will see that the url isn’t even valid, "http://localhost:3000/users/NaN/recipes.json". This is occurring because my data on the index and show page are completely different and the variables that determine that url can’t be set in the same way on both pages.
+            </p>
+
+            <p>
+              Now that we can see the potential pitfalls of not setting up page specific JavaScript lets get into the solution.
+            </p>
+
+            <h3>Solution</h3>
+
+            <p>
+              The first thing to do is to dynamically set the class of your body tag in your layout based on the controller name and action name.
+            </p>
+
+            <label>Located in: <span class="code-label">app/views/layouts/application.html.erb</span></label>
+
+            <pre>
+              <code>
+                <span>&lt;<span>body class="<%= controller_name %> <%= action_name %>"</span>&gt;</span>
+                  ...
+                <span>&lt;/<spa>body</span>&gt;</span>
+              </code>
+            </pre>
+
+            <p>
+              Isn’t that awesome! Rails already has preset variables called controller_name and action_name that you simply have to put in erb tags.
+            </p>
+
+            <h3 style="text-align: center;">Index</h3>
+            <img class="col-md-12"src="../img/rails-js-screenshots/recipes-index-edited.png">
+            <h3 style="text-align: center;">New</h3>
+            <img class="col-md-12"src="../img/rails-js-screenshots/recipes-new-edited.png">
+            <h3 style="text-align: center;">Show</h3>
+            <img class="col-md-12" style="margin-bottom: 30px;"src="../img/rails-js-screenshots/recipes-show-edited.png">
+
+            <p>
+              The next step is using the <a target="_blank" href="https://github.com/Verba/jquery-readyselector">jquery-readyselector plugin</a>. This is what does the magic of reading what the current class is, set by the above variables in your body tag, and then firing only the JavaScript you need.
+            </p>
+
+            <p>
+              Add <a target="_blank" href="https://raw.github.com/Verba/jquery-readyselector/master/jquery.readyselector.js">this javavascript code</a> to a new file: app/assets/javascripts/jquery-readyselector.js
+            </p>
+
+            <p>
+              Then include the new plugin in the application.js manifest file:
+            </p>
+
+            <label><span class="code-label">Located in: app/assests/javascripts/application.js</span></label>
+
+            <pre>
+              <code>
+                <span>//= require jquery</span>
+                <span>//= require jquery_ujs</span>
+                <span>//= require jquery-readyselector</span>
+                <span>//= require tree .</span>
+              </code>
+            </pre>
+
+            <p>
+              Now you just need to put the page specific JavaScript code in its isolated asset file and scope it to the page you want.
+            </p>
+
+            <label><span class="code-label">Located in: app/assets/javascripts/recipes-show.js and app/assets/javascripts/recipes-index.js</span></label>
+
+            <pre>
+              <code>
+                <span>$(".recipes.show").ready(function() {</span>
+              	<span>…</span>
+                <span>}</span><br>
+                <span>$(".recipes.index").ready(function() {</span>
+                <span>…</span>
+                <span>}</span>
+              </code>
+            </pre>
+
+            <p>
+              Now, for example, if you load up the recipe show page, the code that is in recipes-index.js won’t run!
+            </p>
+
+            <img class="col-md-12"src="../img/rails-js-screenshots/psj-fixed-edited.png">
+
+            <p>
+              How cool is that!
+            </p>
+
+            <h3>Conclusion</h3>
+
+            <p>
+              Hopefully this is able to help someone out who is looking for a good way to do page specific JavaScript and give a little more insight into my homebrewed beer recipe app using Rails and JavaScript.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
