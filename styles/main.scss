@@ -474,7 +474,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 998px) {
   #about {
     img {
       height: 250px;
@@ -615,6 +615,7 @@ body {
 
   #footer {
     padding: 25px 0px;
+    overflow: hidden;
 
     .left-column{
       color: white;
@@ -773,7 +774,6 @@ hr {
 
 @media only screen and (max-width: 480px) {
   #footer {
-    overflow: hidden;
 
     .right-column {
       font-size: 1.5em;
