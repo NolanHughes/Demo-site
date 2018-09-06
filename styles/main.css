@@ -512,11 +512,13 @@ hr {
     .inside-container-blog .posts p, .inside-container-blog .posts li {
       font-size: 1.5em; } }
 @media only screen and (max-width: 480px) {
-  #footer .right-column {
-    font-size: 1.5em; }
-    #footer .right-column .email, #footer .right-column p {
-      font-size: .7em; }
-    #footer .right-column img {
-      height: 35px; } }
+  #footer {
+    overflow: hidden; }
+    #footer .right-column {
+      font-size: 1.5em; }
+      #footer .right-column .email, #footer .right-column p {
+        font-size: .7em; }
+      #footer .right-column img {
+        height: 35px; } }
 
 /*# sourceMappingURL=main.css.map */
