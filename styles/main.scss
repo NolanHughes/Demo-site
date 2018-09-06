@@ -153,8 +153,8 @@ body {
   .right-column {
     color: $accent-color-2;
     text-align: left;
-    font-size: .8em;
-    padding-top: 14px;
+    font-size: .95  em;
+    padding-top: 9px;
   }
 }
 
@@ -162,10 +162,34 @@ body {
   background-color: $accent-color-4;
   color: white;
 
+  .project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .github-link {
+    color: white;
+    font-size: 1.7em;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      color: $accent-color-3;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .hyphen {
+    margin: 0 8px;
+    font-size: 1.7em;
+  }
+
   header {
     text-decoration: underline;
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 1.7em;
     text-align: center;
   }
 
@@ -173,8 +197,8 @@ body {
     overflow: hidden;
     img {
       height: 100%;
-      max-width: 350px;
-      max-height: 350px;
+      max-width: 340px;
+      max-height: 340px;
       border: 5px solid $accent-color-2;
     }
   }

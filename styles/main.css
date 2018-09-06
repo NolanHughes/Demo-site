@@ -88,23 +88,39 @@ body {
 #bio .right-column {
   color: #a5a5af;
   text-align: left;
-  font-size: .8em;
-  padding-top: 14px; }
+  font-size: .95  em;
+  padding-top: 9px; }
 
 #gallery {
   background-color: #015249;
   color: white; }
+  #gallery .project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center; }
+  #gallery .github-link {
+    color: white;
+    font-size: 1.7em;
+    font-weight: bold; }
+    #gallery .github-link:hover {
+      text-decoration: none;
+      color: #77c9d4; }
+    #gallery .github-link:focus {
+      text-decoration: none; }
+  #gallery .hyphen {
+    margin: 0 8px;
+    font-size: 1.7em; }
   #gallery header {
     text-decoration: underline;
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 1.7em;
     text-align: center; }
   #gallery .col-md-6, #gallery .col-md-4 {
     overflow: hidden; }
     #gallery .col-md-6 img, #gallery .col-md-4 img {
       height: 100%;
-      max-width: 350px;
-      max-height: 350px;
+      max-width: 340px;
+      max-height: 340px;
       border: 5px solid #a5a5af; }
   #gallery .col-md-4 {
     margin-bottom: 20px; }
