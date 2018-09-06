@@ -775,10 +775,16 @@ hr {
 @media only screen and (max-width: 480px) {
   #footer {
 
+    .email {
+      text-align: center;
+      color: white;
+      font-size: 1.3em;
+    }
+
     .right-column {
       font-size: 1.5em;
 
-      .email, p {
+      p {
         font-size: .7em;
       }
 
