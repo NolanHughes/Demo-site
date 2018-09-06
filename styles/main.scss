@@ -163,16 +163,15 @@ body {
   color: white;
 
   .project-header {
-    display: flex;
-    align-items: center;
     margin-bottom: 15px;
-    justify-content: center;
   }
 
   .github-link {
     color: white;
-    font-size: 1.7em;
+    margin-top: 5px;
+    font-size: 1.25em;
     font-weight: bold;
+    display: inline-block;
     &:hover {
       text-decoration: none;
       color: $accent-color-3;
@@ -182,15 +181,15 @@ body {
     }
   }
 
-  .hyphen {
-    margin: 0 8px;
-    font-size: 1.7em;
-  }
-
   header {
     text-decoration: underline;
     font-size: 1.7em;
     text-align: center;
+  }
+
+  .no-github-header {
+    margin-bottom: 30px;
+    display: inline-block;
   }
 
   .col-md-6, .col-md-4 {
@@ -200,6 +199,7 @@ body {
       max-width: 340px;
       max-height: 340px;
       border: 5px solid $accent-color-2;
+      width: 100%;
     }
   }
 
@@ -760,7 +760,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 998px) {
   .inside-container-blog{
     width: 80%;
     .posts {
@@ -775,6 +775,10 @@ hr {
   #footer {
     .right-column {
       font-size: 1.5em;
+
+      .email, p {
+        font-size: .7em;
+      }
 
       img {
         height: 35px;

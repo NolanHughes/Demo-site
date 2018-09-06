@@ -95,33 +95,33 @@ body {
   background-color: #015249;
   color: white; }
   #gallery .project-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    justify-content: center; }
+    margin-bottom: 15px; }
   #gallery .github-link {
     color: white;
-    font-size: 1.7em;
-    font-weight: bold; }
+    margin-top: 5px;
+    font-size: 1.25em;
+    font-weight: bold;
+    display: inline-block; }
     #gallery .github-link:hover {
       text-decoration: none;
       color: #77c9d4; }
     #gallery .github-link:focus {
       text-decoration: none; }
-  #gallery .hyphen {
-    margin: 0 8px;
-    font-size: 1.7em; }
   #gallery header {
     text-decoration: underline;
     font-size: 1.7em;
     text-align: center; }
+  #gallery .no-github-header {
+    margin-bottom: 30px;
+    display: inline-block; }
   #gallery .col-md-6, #gallery .col-md-4 {
     overflow: hidden; }
     #gallery .col-md-6 img, #gallery .col-md-4 img {
       height: 100%;
       max-width: 340px;
       max-height: 340px;
-      border: 5px solid #a5a5af; }
+      border: 5px solid #a5a5af;
+      width: 100%; }
   #gallery .col-md-4 {
     margin-bottom: 20px; }
   #gallery .gallery-text-sm-screens {
@@ -506,7 +506,7 @@ hr {
   height: 25vh;
   min-height: 125px; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 998px) {
   .inside-container-blog {
     width: 80%; }
     .inside-container-blog .posts p, .inside-container-blog .posts li {
@@ -514,6 +514,8 @@ hr {
 @media only screen and (max-width: 480px) {
   #footer .right-column {
     font-size: 1.5em; }
+    #footer .right-column .email, #footer .right-column p {
+      font-size: .7em; }
     #footer .right-column img {
       height: 35px; } }
 
