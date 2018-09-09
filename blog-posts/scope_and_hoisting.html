@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                  <li><a href="../about_blog.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>JavaScript Scope and Hoisting</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on September 8th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              Today I want to talk about two JavaScript concepts, scope and hoisting. Although two separate terms, they are related. I think an understanding of scope is probably best so that hoisting comes more naturally.
+            </p>
+
+            <h3>Scope</h3>
+
+            <p>
+              Scope determines the accessibility (visibility) of variables. Basically the scope of a variable determines how you access your variables throughout your JS files. There are three types of scope: global, function, and block. Lets go over the first two with some examples.
+            </p>
+
+            <h3 class="smaller-h3">Global scope</h3>
+            <code>
+              <span>var catName = "Melkor";</span><br>
+
+              <span>// code here can use catName, eg. console.log(catName)</span><br>
+
+              <span>myFunction = () => {</span>
+
+              <span style="text-indent: 23px">    // code here can also use catName, eg. alert(catName)</span>
+
+              <span>}</span>
+            </code>
+
+            <p>Here we can see that the variable catName can be used anywhere. </p>
+
+            <h3 class="smaller-h3">Function scope</h3>
+
+            <code>
+              <span>// code here can NOT use catName, eg. console.log(catName) would give us an error (ReferenceError: catName is not defined)</span><br>
+
+              <span>myFunction = () => {</span>
+              <span style="text-indent: 23px">    var catName = "Melkor";</span>
+
+              <span style="text-indent: 23px">    // code here CAN use catName</span>
+
+              <span>}</span><br>
+
+              <span>// code here can NOT use catName either</span>
+            </code>
+
+            <p>In this example, the variable catName can only be used in the function where it is declared.</p>
+
+            <p>
+              The other type of scope is block and only deals with the JavaScript key words let and const. This is in the same vain as function scope but pertains to any blocks instead of just functions. Here are some examples.
+            </p>
+
+            <code>
+              <span>var x = 10</span>
+
+              <span>if (1 === 1) {</span>
+              <span style="text-indent: 23px">  var x = 2</span>
+              <span>}</span>
+
+              <span>console.log(x)</span>
+            </code>
+
+            <p>In this example it would log x as being 2 in the console.</p>
+
+            <code>
+              <span>let x = 10</span>
+
+              <span>if (1 === 1) {</span>
+              <span style="text-indent: 23px">  let x = 2</span>
+              <span>}</span>
+
+              <span>console.log(x)</span>
+            </code>
+
+            <p>
+              In this example it would log x as being 10 in the console. This is because redeclaring a variable inside a block will not redeclare the variable outside the block when using let instead of var.
+            </p>
+
+            <h3 class="smaller-h3">Let vs. Const</h3>
+
+            <p>The keywords let and const share many of the same properties except that const cannot be redeclared.</p>
+            <code>
+              <span>const PI = 3.141592653589793;</span>
+              <span>PI = 3.14;      // This will give an error</span>
+            </code>
+
+            <p>
+              Const properties in objects or elements in a const array can be reassigned but not the whole array or object.
+            </p>
+
+            <h3>Hoisting</h3>
+
+            <p>
+            Declarations are hoisted to the top of the scope, assignments are not. Let it be known that the keyword var is the only one out of var, let, and const that is hoisted.
+            </p>
+
+            <p>
+            See the below examples and paragraphs for more explanation. 
+            </p>
+
+            <h3 class="smaller-h3">Example 1</h3>
+            <code>
+              <span>console.log(y)</span>
+              <span>var y = 7</span>
+              <span>// undefined</span>
+            </code>
+
+            <h3 class="smaller-h3">Example 2</h3>
+            <code>
+              <span>console.log(y)</span>
+              <span>// ReferenceError: y is not defined</span>
+            </code>
+
+            <h3 class="smaller-h3">Example 3</h3>
+            <code>
+              <span>var y = 7</span>
+              <span>console.log(7)</span>
+              <span>// 7</span>
+            </code>
+
+            <p>
+              Example 1 would log as undefined. This is because <span><code class="inline-code">var y</code></span> (or the declaration) is being hoisted to the top so, <span><code class="inline-code">console.log(y)</code></span> sees that the variable is there but it just isn’t assigned to anything yet. If it didn’t see the variable y it would give us an error like in example 2.
+            </p> 
+
+            <p>
+              To further this point, example 1 also isn’t saying that y = 7 because <span><code class="inline-code">= 7</code></span> (or the assignment) isn’t hoisted by JavaScript. The <span><code class="inline-code">console.log</code></span> would have to be below the declaration and assignment of the variable, like in example 3. 
+            </p>
+
+            <h3>Conclusion</h3>
+
+            <p>
+              Hopefully that shed some light on scope and hoisting in JavaScript. It’s a confusing subject but an extremely important one considering how many bugs can appear because of a lack of understanding.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
