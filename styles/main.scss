@@ -74,6 +74,7 @@ body {
     font-size: 4.5em;
     line-height: 1.5em;
   }
+
   header {
     font-size: 65px;
     color: white;
@@ -89,6 +90,23 @@ body {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     padding: 0px 7px;
+  }
+
+  code {
+    padding: 10px 20px;
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+    background-color: Gainsboro;
+
+    span {
+      display: block;
+    }
+  }
+
+  .inline-code {
+    margin-bottom: 0px;
+    padding: 0px 10px;
   }
 }
 
@@ -715,6 +733,10 @@ body {
       a:hover {
         color: $accent-color-3;
       }
+    }
+
+    .smaller-h3 {
+      font-size: 1.9em;
     }
 
     h4 {
