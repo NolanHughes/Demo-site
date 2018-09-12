@@ -172,7 +172,7 @@ body {
   #footer .email {
     text-align: center;
     color: white;
-    font-size: 2em; }
+    font-size: 1.5em; }
   #footer .footer-content {
     display: flex;
     align-items: center; }
@@ -380,13 +380,17 @@ body {
 
   #footer .middle-column {
     font-size: 20px;
-    word-spacing: 12vw; } }
-@media only screen and (max-width: 675px) {
+    word-spacing: 12vw; }
+  #footer .email {
+    font-size: 1.2em; } }
+@media only screen and (max-width: 725px) {
   #about img {
     height: 175px; }
 
   #footer .left-column header {
-    font-size: 3em; } }
+    font-size: 2.5em; }
+  #footer .email {
+    font-size: .8em; } }
 @media only screen and (max-width: 480px) {
   .hero {
     padding: 40px 0px; }
@@ -448,7 +452,7 @@ body {
         font-size: .9em; }
     #footer .right-column {
       font-size: .75em;
-      line-height: 2.25em;
+      line-height: 1.7em;
       padding: 0px; }
       #footer .right-column ul {
         padding: 0px; }
@@ -531,7 +535,7 @@ hr {
       font-size: 1.5em; } }
 @media only screen and (max-width: 480px) {
   #footer .email {
-    font-size: 1.3em; }
+    font-size: .6em; }
   #footer .right-column {
     font-size: 1.5em; }
     #footer .right-column p {

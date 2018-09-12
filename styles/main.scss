@@ -277,7 +277,7 @@ body {
   .email {
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .footer-content {
@@ -552,10 +552,14 @@ body {
       font-size: 20px;
       word-spacing: 12vw;
     }
+
+    .email {
+      font-size: 1.2em;
+    }
   }
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 725px) {
   #about img {
     height: 175px;
   }
@@ -563,8 +567,12 @@ body {
     .left-column{
 
       header {
-        font-size: 3em;
+        font-size: 2.5em;
       }
+    }
+
+    .email {
+      font-size: .8em;
     }
   }
 }
@@ -661,7 +669,7 @@ body {
 
     .right-column {
       font-size: .75em;
-      line-height: 2.25em;
+      line-height: 1.7em;
       padding: $grid-gutter-width-base;
 
       ul {
@@ -803,7 +811,7 @@ hr {
 @media only screen and (max-width: 480px) {
   #footer {
     .email {
-      font-size: 1.3em;
+      font-size: .6em;
     }
 
     .right-column {
