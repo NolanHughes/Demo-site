@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                  <li><a href="../about_blog.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Ember First Impressions</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on September 17th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              So last Friday I did a code challenge for a company that I’m really interested in and had to use a completely new to me JavaScript framework. That framework was Ember. I’m quite familiar with React since that is what is taught in Flatiron’s Web Development Bootcamp, but was a little nervous diving into something I knew nothing about.
+            </p>
+              
+            <p>
+              Luckily, I had the wherewithal to research the company before I even knew they were going to send me a code challenge and set up a basic Ember app earlier that morning. It was still a bit of a challenge (see what I did there) to code with a completely new framework, but I was able to get through it. It was rather simple to set up and install all of the dependencies and get things up and going.
+            </p>
+              
+            <p>
+              I started off by familiarizing myself with the project, the tests, and the written requirements in the read me. Each route in the Ember project they sent me had a bit more of a description detailing all of the requirements, so that was rather nice. This helped give me a base for what I needed to accomplish even if I wasn’t sure about Ember’s syntax and how to structure everything. Luckily, it was still all JavaScript, HTML, and CSS, so I had all of that base knowledge to fall back on.
+            </p>
+              
+            <p>
+              One of the main differences between Ember and React that I found was in how you handle writing your actual HTML. React uses JSX and Ember uses handlebars. I read quite a few articles saying that at Ember 2.0 it switched to HTMLBars, but the official Ember docs talked about handlebars under the templates. I know that HTMLBars is built on top of, and improves on handlebars, but I’ll have to do some more research to get all of my terminology correct. I had used handlebars for a short period of time in my course work but wasn’t really in love with it. 
+            </p>
+
+            <p>
+              One thing I did find nice about handlebars while doing this challenge is that it makes the separation between views and your JavaScript code more distinct. Obviously you have to include properties in your hbs files, but the distinction between a .hbs file and a .js file is real nice.              
+            </p>
+
+            <p>
+              In conclusion, the code challenge was a fun and rewarding experience. I’m really looking forward to reading up on Ember docs and gaining a much more in depth knowledge of this framework.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
