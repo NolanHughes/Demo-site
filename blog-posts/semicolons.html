@@ -63,8 +63,8 @@
           <div id="hamburger" class="js-menu-open col-md-6">
             <img src="../img/icons/hamburgerButton-gray.png"/>
           </div>
-          <h1>Post Coding Bootcamp Guidance</h1>
-          <h4 class="post-sub-heading">Posted by Nolan Hughes on September 24th, 2018</h4>
+          <h1>JavaScript - When To Use Semicolons</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on September 30th, 2018</h4>
         </div>
       </div>
 
@@ -72,36 +72,74 @@
         <div class="inside-container-blog inside-container">
           <div class="posts">
             <p>
-              One of my biggest worries after graduating from a bootcamp like Flatiron’s (besides actually landing a job) is how I should be continuing to improve my programming skills. Because the start of my job search was so filled with job applications and trying to build up my network I haven’t had lots of time to flex my coding muscles. That being said I have been in the process of deploying my final project and making a task management app for my work.
+              The age-old JavaScript question of whether to use semicolons in your code or not is a divisive one. What I’ve discerned from reading numerous blog posts and documentation is that neither option of “always using semicolons” and “never using semicolons” is right. Below I’ll explain why and give some examples to back up my findings.
+            </p>
+
+            <h3>Always use semicolons</h3>
+
+            <p>
+              A semicolon is what breaks up statements in your code. They can be omitted though if the statement is followed by a line break. A semicolon is only necessary when you have two or more statements on the same line.
+            </p>
+
+            <code>
+              <span>var i = 1; i++ //semicolon is necessary</span><br>
+              <span>var i = 1 //semicolon is optional</span>
+              <span>i++ //semicolon is optional</span>
+            </code>
+
+            <p>
+              You shouldn’t put a semicolon after a closing curly bracket }. The only exception is assignment statements, such as var obj = {}; where it is assigning an object or function to a variable and therefore makes it optional.
+            </p>
+
+            <code>
+              <span>if (…) {…} else {…} //No semicolon</span>
+              <span>for(…) {…} //No semicolon</span>
+              <span>while (…) {…} //No semicolon</span>
+              <span>function (arg) {…} //No semicolon</span>
+            </code>
+
+            <p>
+              It isn’t going to harm your code to use semicolons in the above examples but typically you don’t see it used.
             </p>
 
             <p>
-              Besides working on and expanding current projects, I’ve thought about learning a new framework or two or taking classes on Udemy. That was until I started talking to a few developers here in Chicago and in my extended network. The main takeaway from those conversations is that I needed to learn how to write tests. In Flatiron all of the labs are test driven so I have lots of experience in using tests to drive how I develop but not any experience actually writing them.
+              A semicolon after round brackets, (), of an if, for, while, or switch statement is going to cause problems though.
             </p>
 
+            <code>
+              <span>if (0 === 1); { alert(“Hello there”) }</span><br>
+              <span>//is the same as</span><br>
+              <span>if (0 === 1); </span>
+              <span>{ alert(“Hello there”) };</span>
+            </code>
+
             <p>
-              I’ll probably start learning RSpec and then go on to learn more about JavaScript testing. Below are a few resources I found that look like they’ll be interesting and informative.
+              The semicolon makes JavaScript think that your if statement is empty and therefore the block with the alert is executed no matter what is happening in the line above it.
             </p>
 
-            <div class="links">
-              <li class="tdd-links">
-                <a href="https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3">
-                Comprehensive TDD blog</a>
-              </li>
-              
-              <li class="tdd-links">
-                <a href="https://www.tutorialspoint.com/rspec/">
-                RSpec Tutorial</a>
-              </li>
-
-              <li class="last-a tdd-links">
-                <a href="https://github.com/ideaq/learn-mocha" >
-                Learn Mocha</a>
-              </li>
-            </div>
+            <h3>Never use semicolons</h3>
 
             <p>
-              Hopefully with these guides I can start implementing tests into all of my future projects and work and will have more succinct and maintainable code!
+              This method is a bit simpler. There’s only one rule: Never start a line with [, (, or `. In these cases you prepend the line with a ;
+            </p>
+
+            <code>
+              <span>;[1, 2, 3].forEach(foo)</span>
+            </code>
+
+            <p>
+              This seems a little needless though because it is typically better practice to set that array as a variable before doing anything to it.
+            </p>
+
+            <code>
+              <span>const array = [1, 2, 3]</span>
+              <span>array.forEach(foo)</span>
+            </code>
+
+            <h3>Conclusion</h3>
+
+            <p>
+              What it really boils down to is personal preference and what is best for your team/group of people that are going to be using your code. This only works though as long as you know all the rules and don’t get bugs from your choice. Personally, I prefer to never use semicolons (mostly because it looks cleaner). But depending on what my team in my next job uses, I’ll definitely adapt to their style guides. 
             </p>
 
           </div>
