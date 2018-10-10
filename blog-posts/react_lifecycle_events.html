@@ -79,9 +79,9 @@
               There are three main categories for React’s lifecycle methods: mounting, updating, and unmounting. Here is a chart from Dan Abramov that does a good job of illustrating the lifecycles.  
             </p>
 
-            <img src="../img/react-lifecycles.jpg" style="width: 100%">
+            <img src="../img/react-lifecycles.jpg"/>
 
-            <h2>Mounting</h2>
+            <h2 class="blog-h2">Mounting</h2>
 
             <h3>Setup props and state</h3>
             <p>
@@ -97,24 +97,24 @@
             <h3>componentDidMount</h3>
             <p>This is a fun one. This hook is executed right after the component did mount, right after the first render. API or AJAX calls should happen during this lifecycle method.</p>
 
-            <h2>Updating</h2>
+            <h2 class="blog-h2">Updating</h2>
 
             <h3>getDerivedStateFromProps</h3>
             <p>I already went over this lifecycle method above just wanted to make sure it was clear that it also gets called again when updating.</p>
 
-            <h3>Render</h3>
-            <p>Same as above.</p>
-
             <h3>shouldComponentUpdate</h3>
             <p>This just determines whether or not react should update the DOM. It only returns a Boolean value.</p>
 
+            <h3>Render</h3>
+            <p>Same as above.</p>
+
             <h3>getSnapshotBeforeUpdate</h3>
-            <p>This lifecycle is invoked right before the most recently rendered output is committed to the DOM. This allows you to capture current values before re-rendering a component so you can save them for after the re-render. Whatever value is returned from this will be passed to componentDidUpdate.</p>
+            <p>This lifecycle is invoked right before the most recently rendered output is committed to the DOM. This allows you to capture current values so you can save them. Whatever value is returned from this will be passed to componentDidUpdate.</p>
 
             <h3>componentDidUpdate</h3>
             <p>This is triggered when the updated component has been updated. Use this one to re trigger third party libraries or things of that nature.</p>
 
-            <h2>Unmounting</h2>
+            <h2 class="blog-h2">Unmounting</h2>
 
             <h3>componentWillUnmount</h3>
             <p>This is basically your clean up crew. It is executed right before the component gets removed from the DOM. Basically anything that the component was holding on to should get removed so that isn’t still hanging around when the component doesn’t exist anymore.</p>

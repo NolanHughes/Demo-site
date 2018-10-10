@@ -37,6 +37,10 @@ body {
   margin: 0px 0px 50px 0px;
   text-transform: uppercase;
 }
+.hero .blog-h2 {
+  font-size: 2.25em;
+  margin-bottom: 30px;
+}
 .hero h1 {
   font-size: 4.5em;
   line-height: 1.5em;
@@ -632,7 +636,8 @@ body {
   margin-bottom: 30px;
 }
 .inside-container-blog .posts h3 {
-  font-size: 2.5em;
+  font-size: 2em;
+  font-weight: 700;
 }
 .inside-container-blog .posts h3 a {
   color: #333;
@@ -649,6 +654,10 @@ body {
 }
 .inside-container-blog .posts li {
   font-size: 1.75em;
+}
+.inside-container-blog .posts img {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 #intro h2 {

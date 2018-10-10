@@ -70,6 +70,12 @@ body {
     margin: 0px 0px 50px 0px;
     text-transform: uppercase;
   }
+
+  .blog-h2 {
+   font-size: 2.25em;
+   margin-bottom: 30px;
+  }
+
   h1 {
     font-size: 4.5em;
     line-height: 1.5em;
@@ -742,7 +748,9 @@ body {
     }
 
     h3 {
-      font-size: 2.5em;
+      font-size: 2em;
+      font-weight: 700;
+
       a {
         color: #333;
       }
@@ -763,6 +771,11 @@ body {
 
     li {
       font-size: 1.75em;
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 30px;
     }
   }
 
