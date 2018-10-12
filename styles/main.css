@@ -645,9 +645,6 @@ body {
 .inside-container-blog .posts h3 a:hover {
   color: #77c9d4;
 }
-.inside-container-blog .posts .smaller-h3 {
-  font-size: 1.9em;
-}
 .inside-container-blog .posts h4 {
   font-style: italic;
   color: #a5a5af;
@@ -698,7 +695,7 @@ hr {
   .inside-container-blog {
     width: 80%;
   }
-  .inside-container-blog .posts p, .inside-container-blog .posts li {
+  .inside-container-blog .posts p, .inside-container-blog .posts li, .inside-container-blog .posts h3 {
     font-size: 1.5em;
   }
 }

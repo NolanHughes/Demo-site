@@ -760,9 +760,7 @@ body {
       }
     }
 
-    .smaller-h3 {
-      font-size: 1.9em;
-    }
+
 
     h4 {
       font-style: italic;
@@ -823,7 +821,7 @@ hr {
   .inside-container-blog{
     width: 80%;
     .posts {
-      p, li {
+      p, li, h3 {
         font-size: 1.5em;
       }
     }

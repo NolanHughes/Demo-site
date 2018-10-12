@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>When To Use Redux</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on October 12th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              I’m currently working on a React project to help with managing tasks for the law office where I work. I was thinking about just using local component state for the whole project, but the more I get into it, the more I am starting to think that I’ll need to use Redux. In this blog post I’ll go over when you should and shouldn’t use Redux to help manage state in React.
+            </p>
+
+            <p>There are two main reasons that I see for wanting to use Redux.</p> 
+
+            <p>1. <strong>You need to use the same piece of state in multiple components.</strong> Sometimes you have data that will be passed around to multiple components. In this instance, if your piece of state is uncoupled from a component, i.e. Redux single source of truth, then it’s a whole lot simpler to just grab from Redux for the multiple components that need it. These components may not have a direct relationship so it would be cumbersome to make sure they both have the same data. My next reason expands on this.</p>
+             
+            <p>2. <strong>There are too many props that are being passed down through multiple components.</strong> This ties in directly to the first reason. It’s so much easier just to have Redux be tied into a lower level component than it is to pass down props from the top of your app to the bottom.</p> 
+
+            <p>There are other reasons for using Redux in a component besides these two, but these are probably the most common ones.</p>
+
+            <p>Conversely, let’s look at why you’d want to use local state and not have Redux in a specific component or at all in your app. The main reason for not using Redux is when <strong>components have state that no other components care about.</strong> An example of this is a toggle element. If it has state that specifies when to be toggled or not, there probably aren’t going to be other components that need to know that data. So here just using local state and setState() in a function to do the toggling will more than suffice.</p>
+
+            <p>Also along those same lines, if you have a form element, the parent form component can house the local state and just pass it down to its children components. This works because there aren’t going to be other components besides direct children still pertaining to that form in the state tree that don’t need that state. It is also likely that there will only be one or two levels of components for the props to be passed down through.</p>
+
+            <p>I personally like the approach of not using Redux until I actually need it. Granted, sometimes when going through the planning stages of building an app it’s apparent that there will be components and state that would work better with Redux. In this case definitely start out with Redux, but just don’t over use it. </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
