@@ -612,6 +612,10 @@ body {
 .inside-container-blog {
   width: 55%;
 }
+.inside-container-blog .inline-code {
+  display: inline;
+  padding: 2px 4px;
+}
 .inside-container-blog p {
   font-size: 1.75em;
 }

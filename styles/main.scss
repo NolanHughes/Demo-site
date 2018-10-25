@@ -718,6 +718,11 @@ body {
 .inside-container-blog {
   width: 55%;
 
+  .inline-code {
+    display: inline;
+    padding: 2px 4px;
+  }
+
   p {
     font-size: 1.75em;
 

@@ -63,7 +63,7 @@
           <div id="hamburger" class="js-menu-open col-md-6">
             <img src="../img/icons/hamburgerButton-gray.png"/>
           </div>
-          <h1>Async Await</h1>
+          <h1>Async/Await</h1>
           <h4 class="post-sub-heading">Posted by Nolan Hughes on October 22nd, 2018</h4>
         </div>
       </div>
@@ -72,6 +72,71 @@
         <div class="inside-container-blog inside-container">
           <div class="posts">
             <p>
+              Today I wanted to talk about async/await in JavaScript. They are syntactic sugar in JavaScript that help organize and keep our asynchronous code concise. Before this addition to the language, the usual way of dealing with asynchronous code was by using a <code class="inline-code">.then</code> chain. 
+            </p>
+            <p>
+              <code class="inline-code">.then</code> is a method that runs a callback you pass to it when the <code class="inline-code">Promise</code> has finished. Here is an example of how you would traditionally use promises and <code class="inline-code">.then</code>.
+            </p>
+
+            <code>
+              <span>function multiplyBy2(x) {</span>
+              <span style="text-indent: 23px">  return new Promise(resolve => {</span>
+              <span style="text-indent: 46px">    setTimeout(() => {</span>
+              <span style="text-indent: 69px">      resolve(x * 2);</span>
+              <span style="text-indent: 46px">    }, 2000);</span>
+              <span style="text-indent: 23px">  });</span>
+              <span>}</span><br>
+
+              <span>function addPromises(x){</span>
+              <span style="text-indent: 23px">return new Promise(resolve => {</span>
+              <span style="text-indent: 46px">multiplyBy2(10)</span>
+              <span style="text-indent: 46px">.then((a) => {</span>
+              <span style="text-indent: 69px">multiplyBy2(20)</span>
+              <span style="text-indent: 69px">.then((b) => {</span>
+              <span style="text-indent: 69px">multiplyBy2(30)</span>
+              <span style="text-indent: 92px">.then((c) => {</span>
+              <span style="text-indent: 115px">resolve(x + a + b + c);</span>
+              <span style="text-indent: 92px">})</span>
+              <span style="text-indent: 69px">})</span>
+              <span style="text-indent: 46px">})</span>
+              <span style="text-indent: 23px">})</span>
+              <span>}</span><br>
+
+              <span>addPromises(10).then(sum => console.log(sum))</span>
+            </code>
+
+            <p>
+              As you can see we are waiting two seconds after each <code class="inline-code" />multiplyBy2()</code> function is called. There is nothing inherently wrong with that since this is a contrived example, but the problem lies in how it looks and is structured. Using all of the nested <code class="inline-code">.then</code> methods is extremely hard to read and decreases maintainability in our code. For a real world example we might need to asynchronously get data from an API and have tasks to do after we receive the data like using the <code class="inline-code" />.json()</code> method on it. 
+            </p>
+
+            <h3>Enter Async/Await</h3>
+            <p>
+              We'll need to create a new function that I'm naming <code class="inline-code">addAsync</code>. It will have the same purpose as <code class="inline-code">addPromises</code> but will be much more maintainable. This function is different because we will append the keyword <code class="inline-code">async</code> before declaring the function. Putting <code class="inline-code">async</code> before your function means that it will always return a <code class="inline-code">Promise</code>
+            </p>
+
+            <code>
+              <span>async function addAsync(x) {</span>
+              <span style="text-indent: 23px">// code here...</span>
+              <span>}</span>
+            </code>
+
+            <p>
+              Now we need to put the <code class="inline-code">await</code> keyword in that function so that it has the same functionality as <code class="inline-code">addPromises</code>
+            </p>
+
+            <code>
+              <span>async function addAsync(x) {</span>
+              <span style="text-indent: 23px">const a = await multiplyBy2(10);</span>
+              <span style="text-indent: 23px">const b = await multiplyBy2(20);</span>
+              <span style="text-indent: 23px">const c = await multiplyBy2(30);</span>
+              <span style="text-indent: 23px">return x + a + b + c;</span>
+              <span>}</span><br>
+
+              <span>addAsync(10).then(sum => console.log(sum))</span>
+            </code>
+
+            <p>
+              Now doesn't that look more manageable?!?! Let's go through what this code is actually doing. As I said above, <code class="inline-code">async</code> always returns a Promise. <code class="inline-code">await</code> makes JavaScript wait until the <code class="inline-code">Promise</code> from <code class="inline-code">multiplyBy2()</code> on each line resolves and then returns its result. This enables us to do a whole array of things with our data and not have to worry about when the asynchronous request is going to come back. JavaScript simply runs the code line by line.
             </p>
 
           </div>
