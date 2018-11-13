@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Git</h1>
+          <h3>Advanced Commands</h3>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on November 12th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              I’ve been actively using Git for about 2 years now, but never took the time to learn some of the more advanced, albeit common, commands. I relied on <a href="https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf" target="_blank">this</a> Git cheat sheet and still do to some extent. It is an absolutely phenomenal resource, but I didn’t try out everything on that sheet and definitely didn’t try to venture out from there.
+            </p>
+
+            <p>
+              Here are the commands I’ll be talking about today.
+            </p>
+
+            <ol>
+              <li>Git stash</li>
+              <li>Git reset</li>
+              <li>Git clone –single-branch</li>
+              <li>Git amend</li>
+            </ol>
+
+            <h3>Git Stash</h3>
+
+            <p>
+              You use <code class="inline-code">git stash</code> when you want to temporarily store changes you’ve made to a working branch but need to switch to start working on something else. This is incredibly handy when you are mid way through a feature but need to work on something else without committing your half completed code.
+            </p>
+
+            <p>
+              Note: <code class="inline-code">git stash</code> won’t stash changes made to untracked or ignored files. If you have this problem, simply use <code class="inline-code">git stash –u</code> to include the stashing of untracked files.
+            </p>
+
+            <p>
+              After you’ve completed your task on the other branch and want to come back to the first branch, just use <code class="inline-code">git stash pop</code> to reapply the previously stashed changes.
+            </p>
+
+            <h3>Git reset</h3>
+
+            <p>
+              At its core, <code class="inline-code">git reset</code> is used for undoing changes. <code class="inline-code">git reset</code> has three basic options: --soft, --mixed, and --hard.
+            </p>
+
+            <p>Here is a good graphic from Atlassian depicting the three options.</p>
+
+            <img src="https://wac-cdn.atlassian.com/dam/jcr:7fb4b5f7-a2cd-4cb7-9a32-456202499922/03%20(8).svg?cdnVersion=kl" />
+
+            <p>
+              I won’t go into the three different trees in git that correspond with the above icons as it is a little bit out of the scope of this post.
+            </p>
+
+            <p><strong>--hard</strong></p>
+
+            <p>This is the most destructive and dangerous of the three options. Any previously pending changes in your git repo get reset to match the state of the Commit Tree. This means any pending work that wasn't committed will be lost.</p>
+
+            <p><strong>--mixed</strong></p>
+
+            <p>
+              This is the default (<code class="inline-code">git reset --mixed</code> does the same thing as <code class="inline-code">git reset</code>). It takes things from the Staging Index (resets them) and puts them in the Working Directory. Compare this to --hard where the Staging Index and the Working directory are both reset.
+            </p>
+
+            <p>
+              The key take away is that if you want to unstage your pending work and not lose it --mixed is the way to go.
+            </p>
+
+            <p><strong>--soft</strong></p>
+
+            <p>It only resets the commit history to whatever you specify. --soft basically doesn’t touch the staging index so those changes follow us “back in time.” </p>
+
+            <h3>Git clone --single-branch</h3>
+
+            <p>This command allows you to clone a single branch from a remote repo. It’s super helpful if you don’t want to clone the whole repo from the remote. The full command would look like the example below (first one is an example and second would be a real implementation if you wanted to clone the cart branch from my drumverb repo on github).</p>
+
+            <code>
+              <span>git clone --single-branch -b [branchname] [host:/dir.git]</span>
+              <span>git clone --single-branch -b cart git@github.com:NolanHughes/drumverb.git</span>
+            </code>
+
+            <h3>Git amend</h3>
+
+            <p>This is a real fun one! I even used it recently on a project. This is for when you just made a slight change to a file and right before that you made a commit. You feel like your small change doesn’t deserve it’s own commit and would be better suited to go in the previous commit. </p>
+
+            <p>To do this, just do the following steps:</p>
+
+            <code>
+              <span>git add [file_that_was_changed]</span>
+              <span>git commit --amend --no-edit</span>
+            </code>
+
+            <p>That’s it! Your changes that fit in better with the previous commit were added to that commit. If you want to edit the commit message just leave off the --no-edit flag.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
