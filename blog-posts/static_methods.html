@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Static Methods</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on November 19th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              I wanted to talk about static methods in JavaScript today. At their core, static methods are just functions that are assigned to the class. Static methods in JavaScript are similar to class methods in Ruby. It’s important to note that they can’t be called on instances of a class.
+            </p>
+
+            <p>
+              Let’s look at an example.
+            </p>
+
+            <code>
+              <span>class User {</span>
+              <span style="text-indent: 23px">static staticMethod() {</span>
+              <span style="text-indent: 46px">alert(this === User);</span>
+              <span style="text-indent: 23px">}</span>
+              <span>}</span><br>
+
+              <span>User.staticMethod(); // true</span>
+            </code>
+
+            <p>
+              The above example demonstrates calling the method on a class, User, and what it returns. In general, static methods are used to implement functions that belong to the class, but not to any particular instance of it.
+            </p>
+
+            <blockquote>
+              Note: The rule for <code class="inline-code">this</code> inside of a static method is that the value of <code class="inline-code">this</code> is the class constructor as shown above.
+            </blockquote>
+
+            <p>
+              To really drive it home, the below example demonstrates sorting instances of a class with a static method.
+            </p>
+
+            <code>
+              <span>class Dog {</span>
+              <span style="text-indent: 23px">  constructor(name, age) {</span>
+              <span style="text-indent: 46px">    this.name = name;</span>
+              <span style="text-indent: 46px">    this.age = age;</span>
+              <span style="text-indent: 23px">  }</span><br>
+
+              <span style="text-indent: 23px">  static compare(dogA, dogB) {</span>
+              <span style="text-indent: 46px">    return dogA.age - dogB.age;</span>
+              <span style="text-indent: 23px">  }</span>
+              <span>}</span><br>
+
+              <span>// usage</span>
+              <span>let dogs = [</span>
+              <span style="text-indent: 23px">  new Dog("Fido", 10),</span>
+              <span style="text-indent: 23px">  new Dog("Rover", 5),</span>
+              <span style="text-indent: 23px">  new Dog("Cinder", 13)</span>
+              <span>];</span><br>
+
+              <span>dogs.sort(Dog.compare);</span><br>
+
+              <span>alert( dogs[0].name ); // Rover</span>
+            </code>
+
+            <p>
+              Here we have <code class="inline-code">Dog.compare</code> encapsulating the dog instances so as to compare them. It doesn't act on the dogs themselves but on the class of <code class="inline-code">Dog</code>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
