@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Ruby Comments</h1>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on November 26th, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              There are 3 basic types of comments in Ruby. Single line, Block, and Inline. Single line and Inline are the most common, but you'll occasionally see large Block comments if the programmer needs to explain something in great detail. Comments are generally used to provide more context for your code or to prevent problematic or incomplete code from executing while you debug it.
+            </p>
+
+            <p>
+              Comments in Ruby typically begin with a hash mark <code class="inline-code">#</code>, like this:
+            </p>
+
+            <h3 style="margin-bottom: 20px;">Single Line Comments</h3>
+
+            <code>
+              <span># Here is a comment</span>
+            </code>
+
+            <p>
+              Here are a few examples of how you could use comments in your code.
+            </p>
+
+            <code>
+              <span># Displays a message to the user</span>
+              <span>puts "Hello World"</span><br>
+              <span># Sets a variable to an array</span>
+              <span>array = ['fish', 'dog', 'cat']</span>
+            </code>
+
+            <p>
+              This usage isn't very practical because anyone with a basic understanding of Ruby already knows what those two lines of code do. It's better to write your comments when further explanation is needed for complex lines.
+            </p>
+
+            <h3 style="margin-bottom: 20px;">Block Comments</h3>
+
+            <p>
+              Here, each line begins with a hash mark <code class="inline-code">#</code>. Block comments are good for when you need to explain somthing in more depth than one line. This can be great for complex problems, but should be avoided if it becomes redundant. 
+            </p>
+
+            <code>
+              <span># This Ruby method takes in two numbers as arguments, a and b, and then</span>
+              <span># adds them together. If I were to run the method like add_two_numbers(4, 5)</span>
+              <span># my return value would be 9. That is how the code</span>
+              <span># would run.</span><br>
+
+              <span>def add_two_numbers(a, b)</span>
+              <span style="text-indent: 23px">a + b</span>
+              <span>end</span>
+            </code>
+
+            <p>
+              I am obviously being facetious here and this isn't a great example of a use case, but I think my point of not being redundant gets across.
+            </p>
+
+            <p>
+              There is also another way to use Block Comments, but it is hardly ever used. This way invloves using <code class="inline-code">=begin</code> and <code class="inline-code">=end</code> at the boundaries of your multi-line comment. Here's an example:
+            </p>
+
+            <code>
+              <span>=begin</span>
+              <span>This is a multi-line comment.</span>
+              <span>This enables you to not to have to write multiple hash marks and still</span>
+              <span>span multiple lines.</span>
+              <span>=end</span>
+            </code>
+
+            <p>
+              The <code class="inline-code">=begin</code> and <code class="inline-code">=end</code> must be at the beginning of their respective lines. They can't be indented. It's for this reason they are rarely used.
+            </p>
+
+            <h3>Inline Comments</h3>
+
+            <p>Inline comments occur on the same line as your code and follow the code itself. They also begin with a hash mark <code class="inline-code">#</code> like most of the previous examples. </p>
+
+            <code>
+              <span>[code]  # Inline comment about the code</span>
+            </code>
+
+            <p>
+              The usage for these follow the same principles as single line code. If more explanation is necessary, feel free to use them but don't over explain and be redundant (says the guy who has used that word 3 times in this blog post).
+            </p>
+
+            <h3>Conclusion</h3>
+
+            <p>
+              To sum it all up, comments are a great way to increase the readability of your code. This comes at a price if you start throwing comments every where. Just use them where needed and try not to over explain yourself. With that in mind, comments can be a great asset to your fellow programmers and even your future self!
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
