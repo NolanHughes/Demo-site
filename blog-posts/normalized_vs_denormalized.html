@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nolan Hughes - Blog</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    <!-- Font api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sumana"/>
+    <!-- favicon -->
+    <link rel="icon" href="../img/icons/nh-logo-leftSideGray.png">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="../scripts/app.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+
+    <div id="sidebar-wrapper" class="">
+      <div id="close-btn" class="js-menu-close">
+        <img src="../img/icons/x-blue.svg">
+      </div>
+      <div class="sidebar-links">
+          <div class="accordion">
+            <div class="section">
+              <input type="checkbox" id="section-1"/>
+              <label for="section-1"><span>Web Developer</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#bio">Bio</a></li>
+                  <li><a href="../index.html#gallery">Projects</a></li>
+                  <li><a href="../index.html#about">Experience</a></a></li>
+                  <li><a href="../index.html#footer">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <input type="checkbox" id="section-2"/>
+              <label for="section-2"><span>Blog</span></label>
+              <div id="list-close-btn" class="content">
+                <ul>
+                  <li><a href="../blog.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div id="main-wrapper">
+
+      <div id="intro-blog-bg">
+        <div id="intro" class="container-fluid hero landscape blog-intro">
+          <div class="logo col-md-6">
+            <a href="../blog.html"><img src="../img/icons/nh-logo-leftSideGray.png" /></a>
+          </div>
+          <div id="hamburger" class="js-menu-open col-md-6">
+            <img src="../img/icons/hamburgerButton-gray.png"/>
+          </div>
+          <h1>Normalized vs. Denormalized</h1>
+          <h3>Data Structures</h3>
+          <h4 class="post-sub-heading">Posted by Nolan Hughes on December 3rd, 2018</h4>
+        </div>
+      </div>
+
+      <div id="body" class="container-fluid hero md-box">
+        <div class="inside-container-blog inside-container">
+          <div class="posts">
+            <p>
+              A database is just an organized way to store your data. The design of that database is largely based off of your current needs and what you think your needs will be in the future. I had previously done some research regarding best practices and through my projects I've been exposed to a few different ways to structure my data. 
+            </p>
+            <p>
+              With that said, I hadn't heard of the terms normalized and denormalized data structures until recently, so I figured I needed to do some research. It's an incredibly fascinating topic and I'll lay out my finding on the differences and use cases with some examples below. 
+            </p>
+
+            <h3>Denormalized</h3>
+
+            <p>
+              A data structure in its simplest form would look like this. 
+            </p>
+
+            <table style="width:100%">
+              <tr>
+                <th>Name</th>
+                <th>Age</th> 
+                <th>Hobbies</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>45</td>
+                <td>Golf, Music, TV</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>60</td>
+                <td>Music</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>Soccer, TV</td>
+              </tr>
+            </table>
+
+            <p>
+              Here we have aboslutely eveyrthing in one table. This works and makes all of our data easy to access, but it's vulnerable to data duplication and non standardized ways of labeling the same data. As it stands right now, everything is easy to read, but what happens when we start to include more information about these people. It is much better suited for multiple tables. To fix this we need normalization. 
+            </p>
+
+            <h3>Normalized</h3>
+
+            <p>
+              A normalized database eliminates redundancy and helps organize our data. A good overarching rule for normalization is that each table full of table only has information about itself. So in our example above we would need a person table and a hobbies table. Adding an id to each row is also good practice and will help us later.
+            </p>
+
+            <table style="width:100%">
+              <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Age</th> 
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>25</td>
+              </tr>
+            </table>
+
+            <table style="width:100%">
+              <tr>
+                <th>id</th>
+                <th>Hobby</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Music</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>TV</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Golf</td>
+              </tr>
+            </table>
+
+            <p>Isn't that better! Now all we have to do is link them together and we have a simple, normalized database.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="inside-container row footer-content">
+          <div class="right-column" id="blog-footer">
+            <ul>
+              <li>
+                <a href="https://learn.co/NolanHughes" target="_blank">
+                  <img src="../img/icons/Flatiron-logo.png"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/NolanHughes" target="_blank">
+                  <img src="../img/icons/github-logo-3.png"/>
+                </a>
+              </li>
+            </ul>
+            <p>©2017 Nolan Hughes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
